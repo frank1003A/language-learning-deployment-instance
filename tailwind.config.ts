@@ -177,7 +177,7 @@ const config = {
       },
       fontFamily: {
         inter: ["Inter"],
-        lilita: ["Lilita One", "Inter"],
+        lilita: ["Lilita One"],
       },
       boxShadow: {
         spread: "0px 1px 18px 0px #0A39B01F",
