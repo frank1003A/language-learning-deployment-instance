@@ -6,12 +6,12 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const LightNav = () => {
-  const [isSignedIn, setIsSignedIn] = useState(true);
+  const [isSignedIn, setIsSignedIn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Check if the user is signed in
-    const userSignedIn = true;
+    const userSignedIn = false;
     setIsSignedIn(userSignedIn);
   }, []);
 
