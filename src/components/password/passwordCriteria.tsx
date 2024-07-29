@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import correct from "../../../public/passwordCriteria/correctPassword.svg";
 import wrong from "../../../public/passwordCriteria/wrongPassword.svg";
 
@@ -10,7 +11,7 @@ const PasswordCriteria = ({ password }: passwordCriteriaProperties) => {
     {
       label: "8 characters",
       isValid: password.length >= 8,
-    }, 
+    },
     {
       label: "Uppercase Letter",
       isValid: /[A-Z]/.test(password),
@@ -21,7 +22,7 @@ const PasswordCriteria = ({ password }: passwordCriteriaProperties) => {
     },
     {
       label: "Special character",
-      isValid:  /[!"#$%&(),.:<>?@^{|}]/.test(password),
+      isValid: /[!"#$%&(),.:<>?@^{|}]/.test(password),
     },
   ];
   return (
@@ -29,7 +30,7 @@ const PasswordCriteria = ({ password }: passwordCriteriaProperties) => {
       {criteria.map((criterion, index) => (
         <div
           key={index}
-          className={` flex w-fit items-center gap-1 rounded-[0.5rem]  border-none px-2 py-[0.59rem] ${criterion?.isValid ? "bg-purple-10 text-purple-90" : "bg-neutral-20 text-secondary-110"}`}
+          className={`flex w-fit items-center gap-1 rounded-[0.5rem] border-none px-2 py-[0.59rem] ${criterion?.isValid ? "bg-purple-10 text-purple-90" : "bg-neutral-20 text-secondary-110"}`}
         >
           {criterion?.isValid ? (
             <Image src={correct} alt="correctPassword" width="12" height="12" />
@@ -37,7 +38,7 @@ const PasswordCriteria = ({ password }: passwordCriteriaProperties) => {
             <Image src={wrong} alt="wrongPassword" width="12" height="12" />
           )}
           <p className="text-center text-[0.75rem] font-normal leading-[1.125rem]">
-          {criterion?.label}
+            {criterion?.label}
           </p>
         </div>
       ))}
