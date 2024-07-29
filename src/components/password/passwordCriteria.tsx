@@ -2,26 +2,26 @@ import Image from "next/image";
 import correct from "../../../public/passwordCriteria/correctPassword.svg";
 import wrong from "../../../public/passwordCriteria/wrongPassword.svg";
 
-export interface passwordCriteriaProps {
+export interface passwordCriteriaProperties {
   password: string;
 }
-const PasswordCriteria = ({ password }: passwordCriteriaProps) => {
+const PasswordCriteria = ({ password }: passwordCriteriaProperties) => {
   const criteria = [
     {
       label: "8 characters",
-      isValid: password.length >= 8
+      isValid: password.length >= 8,
     }, 
     {
       label: "Uppercase Letter",
-      isValid: /[A-Z]/.test(password)
+      isValid: /[A-Z]/.test(password),
     },
     {
       label: "Lowercase Letter",
-      isValid: /[a-z]/.test(password)
+      isValid: /[a-z]/.test(password),
     },
     {
       label: "Special character",
-      isValid: /[!@#$%^&*(),.?":{}|<>]/.test(password)
+      isValid:  /[!"#$%&(),.:<>?@^{|}]/.test(password),
     },
   ];
   return (
