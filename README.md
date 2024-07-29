@@ -14,8 +14,8 @@ In order to run this app locally, you should have the following programs install
 #### Clone this repository
 
 ```
-git clone git@github.com/HNGprojects/HNG_boilerplate_nextjs.git
-cd HNG_boilerplate_nextjs
+git clone https://github.com/hngprojects/language_learning_fe.git
+cd language_learning_fe
 ```
 
 #### Install dependencies
