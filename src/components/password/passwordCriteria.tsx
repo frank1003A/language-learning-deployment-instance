@@ -9,19 +9,19 @@ const PasswordCriteria = ({ password }: passwordCriteriaProps) => {
   const criteria = [
     {
       label: "8 characters",
-      isValid: password.length >= 8,
+      isValid: password.length >= 8
     }, 
     {
       label: "Uppercase Letter",
-      isValid: /[A-Z]/.test(password),
+      isValid: /[A-Z]/.test(password)
     },
     {
       label: "Lowercase Letter",
-      isValid: /[a-z]/.test(password),
+      isValid: /[a-z]/.test(password)
     },
     {
       label: "Special character",
-      isValid: /[!@#$%^&*(),.?":{}|<>]/.test(password),
+      isValid: /[!@#$%^&*(),.?":{}|<>]/.test(password)
     },
   ];
   return (
@@ -29,7 +29,7 @@ const PasswordCriteria = ({ password }: passwordCriteriaProps) => {
       {criteria.map((criterion, index) => (
         <div
           key={index}
-          className={`rounded-[0.5rem]  w-fit flex items-center gap-1 border-none px-2 py-[0.59rem] ${criterion?.isValid ? "bg-purple-10 text-purple-90" : "bg-neutral-20 text-secondary-110"}`}
+          className={` flex w-fit items-center gap-1 rounded-[0.5rem]  border-none px-2 py-[0.59rem] ${criterion?.isValid ? "bg-purple-10 text-purple-90" : "bg-neutral-20 text-secondary-110"}`}
         >
           {criterion?.isValid ? (
             <Image src={correct} alt="correctPassword" width="12" height="12" />
