@@ -1,19 +1,20 @@
 import { render, screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
+
 import LightNav from "./LightNav";
 
 import "@testing-library/jest-dom/extend-expect";
 
 describe("lightNav", () => {
   it("renders desktop logo", () => {
-    expect.assertions(1); 
+    expect.assertions(1);
     render(<LightNav />);
     const desktopLogo = screen.getByAltText("desktop-logo");
     expect(desktopLogo).toBeInTheDocument();
   });
 
   it("renders mobile logo", () => {
-    expect.assertions(1); 
+    expect.assertions(1);
     render(<LightNav />);
     const mobileLogo = screen.getByAltText("mobile-logo");
     expect(mobileLogo).toBeInTheDocument();
@@ -27,7 +28,4 @@ describe("lightNav", () => {
     expect(signInButton).toBeInTheDocument();
     expect(signUpButton).toBeInTheDocument();
   });
-
 });
-
-
