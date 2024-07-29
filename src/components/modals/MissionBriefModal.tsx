@@ -7,7 +7,7 @@ const MissionBriefModal = () => {
         <div className="relative">
           <div className="absolute left-0 right-0 bg-black-140 bg-opacity-50 text-center">
             <Image
-              src="/images/modal images/Frame 13.png"
+              src="/images/modal-images/Frame 13.png"
               alt="Mission Brief"
               width={300}
               height={42}
@@ -32,7 +32,7 @@ const MissionBriefModal = () => {
                 </p>
               </div>
               <Image
-                src="/images/modal images/fast forward story.png"
+                src="/images/modal-images/fast forward story.png"
                 alt="Fast Forward"
                 width={50}
                 height={50}
