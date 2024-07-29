@@ -8,8 +8,8 @@ import { Toaster } from "~/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "Skycom",
-  description: "Skycom",
+  title: "Delve - Language Learning AI 3D Game",
+  description: "Explore 3D worlds, solve puzzles, and learn new languages with AI-driven gameplay in Delve!",
 };
 
 export default function RootLayout({
