@@ -1,4 +1,6 @@
+import HeroSection from "~/components/HeroSection";
+
 function page() {
-  return <div>Welcome to our Language Learning platform.</div>;
+  return <HeroSection />;
 }
 export default page;

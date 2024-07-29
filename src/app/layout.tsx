@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fira_Sans_Condensed } from "next/font/google";
 
 import "./globals.css";
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Skycom",
   description: "Skycom",
 };
-
+export const fira_sans = Fira_Sans_Condensed({ subsets: ["latin"], weight:["400","500","700","800"] });
 export default function RootLayout({
   children,
 }: Readonly<{
