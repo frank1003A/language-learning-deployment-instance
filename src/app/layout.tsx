@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Lilita_One } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import "./globals.css";
 
 import Progress_bar from "~/components/progress-bar";
 import { Toaster } from "~/components/ui/toaster";
 
-const inter = Inter({ subsets: ["latin"] });
-const lilitaOne = Lilita_One({ subsets: ["latin"], weight: "400" });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Delve - Language Learning AI 3D Game",
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${lilitaOne.className}`}>
+      <body className={`${inter.className}`}>
         <div className="mx-auto w-full max-w-[1440px]">
           <Progress_bar />
           {children}
