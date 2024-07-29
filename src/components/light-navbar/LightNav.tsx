@@ -6,20 +6,17 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const LightNav = () => {
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Check if the user is signed in
-    const userSignedIn = false;
+    const userSignedIn = true;
     setIsSignedIn(userSignedIn);
   }, []);
 
   const handleMobileMenuToggle = () => {
-    console.log("mobile icon was clicked!!!");
-    // setIsMobileMenuOpen((prevState) => !prevState);
-    // setIsMobileMenuOpen(!isMobileMenuOpen);
-    // console.log("isMobileMenuOpen:", !isMobileMenuOpen);
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
