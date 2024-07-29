@@ -4,81 +4,147 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --black-140: 0, 0, 0;
+    
+    --neutral-10: 248, 250, 251;
+    --neutral-20: 246, 248, 250;
+    --neutral-30: 244, 246, 249;
+    --neutral-40: 233, 238, 243;
+    --neutral-50: 222, 229, 237;
+    --neutral-60: 199, 211, 225;
+    --neutral-70: 177, 194, 213;
+    --neutral-80: 152, 129, 201;
+    --neutral-90: 144, 168, 195;
+    --neutral-100: 118, 142, 169;
+    --neutral-110: 93, 117, 144;
+    --neutral-120: 67, 88, 118;
+    --neutral-130: 42, 66, 93;
+    --neutral-140: 16, 40, 67;
+    --neutral-150: 0, 15, 42;
+    
+    --primary-10: 255, 242, 229;
+    --primary-20: 255, 229, 204;
+    --primary-30: 255, 216, 178;
+    --primary-40: 255, 203, 153;
+    --primary-50: 255, 189, 128;
+    --primary-60: 255, 176, 102;
+    --primary-70: 255, 163, 76;
+    --primary-80: 255, 150, 51;
+    --primary-90: 255, 137, 25;
+    --primary-100: 255, 124, 0;
+    --primary-110: 229, 98, 0;
+    --primary-120: 204, 73, 0;
+    --primary-130: 178, 47, 0;
+    --primary-140: 153, 22, 0;
+    --primary-150: 128, 0, 0;
+  
+    --pink-10: 252, 236, 241;
+    --pink-20: 249, 217, 227;
+    --pink-30: 247, 198, 213;
+    --pink-40: 244, 179, 199;
+    --pink-50: 241, 160, 184;
+    --pink-60: 238, 142, 170;
+    --pink-70: 235, 123, 156;
+    --pink-80: 233, 104, 142;
+    --pink-90: 230, 85, 128;
+    --pink-100: 227, 66, 114;
+    --pink-110: 201, 40, 88;
+    --pink-120: 176, 15, 63;
+    --pink-130: 112, 0, 12;
+    --pink-140: 74, 0, 0;
+  
+    --purple-10: 244, 229, 255;
+    --purple-20: 233, 204, 255;
+    --purple-30: 222, 178, 255;
+    --purple-40: 211, 153, 255;
+    --purple-50: 199, 128, 255;
+    --purple-60: 188, 102, 255;
+    --purple-70: 177, 76, 255;
+    --purple-80: 166, 51, 255;
+    --purple-90: 155, 25, 255;
+    --purple-100: 144, 0, 255;
+    --purple-110: 118, 0, 229;
+    --purple-120: 93, 0, 204;
+    --purple-130: 67, 0, 178;
+    --purple-140: 42, 0, 153;
+  
+    --secondary-10: 241, 241, 241;
+    --secondary-20: 236, 236, 236;
+    --secondary-30: 231, 231, 231;
+    --secondary-40: 208, 208, 208;
+    --secondary-50: 184, 184, 184;
+    --secondary-60: 160, 160, 160;
+    --secondary-70: 136, 136, 136;
+    --secondary-80: 113, 113, 113;
+    --secondary-90: 89, 89, 89;
+    --secondary-100: 20, 20, 20;
+    --secondary-110: 42, 42, 42;
+    --secondary-120: 27, 27, 27;
+  
+    --success-10: 249, 253, 251;
+    --success-20: 247, 253, 250;
+    --success-30: 245, 252, 249;
+    --success-40: 236, 249, 242;
+    --success-50: 226, 246, 236;
+    --success-60: 207, 240, 223;
+    --success-70: 188, 235, 210;
+    --success-80: 169, 229, 197;
+    --success-90: 159, 226, 191;
+    --success-100: 133, 200, 165;
+    --success-120: 82, 149, 114;
+    --success-130: 57, 124, 89;
+    --success-140: 31, 98, 63;
+    --success-150: 6, 73, 38;
+    --success-160: 0, 47, 12;
+  
+    --critical-10: 254, 246, 246;
+    --critical-20: 254, 242, 241;
+    --critical-30: 253, 236, 235;
+    --critical-40: 251, 217, 215;
+    --critical-50: 250, 199, 195;
+    --critical-60: 246, 161, 155;
+    --critical-70: 242, 123, 115;
+    --critical-80: 239, 86, 75;
+    --critical-90: 237, 67, 55;
+    --critical-100: 211, 41, 29;
+    --critical-110: 186, 16, 4;
+    --critical-120: 160, 0, 0;
+    --critical-130: 135, 0, 0;
+    --critical-150: 84, 0, 0;
+    --critical-160: 58, 0, 0;
+  
+    --transparent-black-10: 33, 33, 33, 0.1;
+    --transparent-black-15: 33, 33, 33, 0.15;
+    --transparent-black-20: 33, 33, 33, 0.2;
+    --transparent-black-25: 33, 33, 33, 0.25;
+    --transparent-black-30: 33, 33, 33, 0.3;
+    --transparent-black-35: 33, 33, 33, 0.35;
+    --transparent-black-40: 33, 33, 33, 0.4;
+    --transparent-black-45: 33, 33, 33, 0.45;
+    --transparent-black-5: 33, 33, 33, 0.05;
+    --transparent-black-50: 33, 33, 33, 0.5;
+    --transparent-black-55: 33, 33, 33, 0.55;
+    --transparent-black-60: 33, 33, 33, 0.6;
+    --transparent-black-65: 33, 33, 33, 0.65;
+    --transparent-black-70: 33, 33, 33, 0.7;
+    --transparent-black-75: 33, 33, 33, 0.75;
+  
+    --transparent-white-10: 255, 255, 255, 0.1;
+    --transparent-white-15: 255, 255, 255, 0.15;
+    --transparent-white-20: 255, 255, 255, 0.2;
+    --transparent-white-25: 255, 255, 255, 0.25;
+    --transparent-white-30: 255, 255, 255, 0.3;
+    --transparent-white-35: 255, 255, 255, 0.35;
+    --transparent-white-40: 255, 255, 255, 0.4;
+    --transparent-white-45: 255, 255, 255, 0.45;
+    --transparent-white-50: 255, 255, 255, 0.5;
+    --transparent-white-55: 255, 255, 255, 0.55;
+    --transparent-white-60: 255, 255, 255, 0.6;
+    --transparent-white-65: 255, 255, 255, 0.65;
+    --transparent-white-70: 255, 255, 255, 0.7;
+}
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --default: 222 47% 11%;
-    --default-foreground: 0 0% 100%;
-
-    --primary: 25 95% 53%;
-
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84% 60%;
-    --destructive-hover: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-
-    --subtle: 210 40% 96%;
-    --subtle-hover: 214 32% 91%;
-    --subtle-foreground: 222 47% 11%;
-
-    --loading: 222 47% 11%;
-    --loading-hover: 215 25% 27%;
-    --loading-foreground: 0 0% 100%;
-
-    --outline: 0 0% 100%;
-    --outline-hover: 210 40% 96%;
-    --outline-foreground: 222 47% 11%;
-
-    --link: 222 47% 11%;
-
-    --error: 0 72% 51%;
-    --success: 102 51% 52%;
-    --warning: 45 93% 47%;
-
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --stroke-colors-stroke: 213 27% 84%;
-
-    --neutralColor-dark-1: 0 0% 32%;
-    --neutralColor-dark-2: 0 0% 4%;
-    --description-text: 215 16% 47%;
-    --breadcrumb-page: 0 0% 42%;
-    --breadcrumb-foreground: 0 0% 13%;
-    --desaturated-blue: 212.73 26.83% 83.92%;
-    --grey50: 0 0% 85.1%;
-
-    --toast-bg: 128, 50%, 94%;
-    --toast-border: 126, 50%, 58%;
-
-    --default-badge-bg: 222, 47%, 11%, 0.1;
-    --primary-badge-bg: 25, 95%, 53%, 0.1;
-    --success-badge-bg: 102, 51%, 52%, 0.1;
-    --error-badge-bg: 0, 72%, 51%, 0.1;
-
-    --blog-related-article-bg: 0°, 0%, 98%;
-    --blog-related-article-heading: 0°, 0%, 32%;
-    --blog-related-article-timeread-bg: 220°, 14%, 96%;
-  }
+  
 }
 
 #nprogress .bar {
@@ -91,14 +157,15 @@
   width: 100%;
   height: 4px !important;
 }
-@layer base {
+
+/* @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
 
 [data-placeholder="true"] {
   background: linear-gradient(
@@ -170,14 +237,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary;
+  @apply bg-primary-100;
   border: 4px solid transparent;
   border-radius: 10px;
   background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary;
+  @apply bg-primary-100;
   background-clip: content-box;
 }
 
@@ -188,7 +255,7 @@
 
 /* For Firefox */
 .html {
-  @apply bg-primary;
+  @apply bg-primary-100;
   scrollbar-width: thin; /* Options are 'auto', 'thin', 'none' */
 }
 
