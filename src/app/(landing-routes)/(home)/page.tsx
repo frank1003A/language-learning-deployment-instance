@@ -1,4 +1,8 @@
 function page() {
-  return <div className="">Welcome to our Language Learning platform.</div>;
+  return (
+    <div className="font-lilita">
+      Welcome to our Language Learning platform.
+    </div>
+  );
 }
 export default page;
