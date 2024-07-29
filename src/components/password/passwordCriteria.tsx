@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { i } from "vitest/dist/reporters-yx5ZTtEV.js";
-
 import correct from "../../../public/passwordCriteria/correctPassword.svg";
 import wrong from "../../../public/passwordCriteria/wrongPassword.svg";
 
@@ -12,7 +10,7 @@ const PasswordCriteria = ({ password }: passwordCriteriaProps) => {
     {
       label: "8 characters",
       isValid: password.length >= 8,
-    },
+    }, 
     {
       label: "Uppercase Letter",
       isValid: /[A-Z]/.test(password),
@@ -39,7 +37,7 @@ const PasswordCriteria = ({ password }: passwordCriteriaProps) => {
             <Image src={wrong} alt="wrongPassword" width="12" height="12" />
           )}
           <p className="text-center text-[0.75rem] font-normal leading-[1.125rem]">
-            {criterion?.label}
+          {criterion?.label}
           </p>
         </div>
       ))}
