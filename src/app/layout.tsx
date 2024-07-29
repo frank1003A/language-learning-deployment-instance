@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fira_Sans_Condensed, Inter } from "next/font/google";
 
 import "./globals.css";
 
@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   description:
     "Explore 3D worlds, solve puzzles, and learn new languages with AI-driven gameplay in Delve!",
 };
-
+export const fira_sans = Fira_Sans_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+});
 export default function RootLayout({
   children,
 }: Readonly<{
