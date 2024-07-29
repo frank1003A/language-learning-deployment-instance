@@ -34,7 +34,13 @@ const QuestPreviewCard = ({
           </h4>
 
           <div className="mt-3 flex flex-row items-center gap-2">
-            <div className="text- text-gray-400">Stage {stage}</div>
+            <div className="text- capitalize text-gray-400">Stage {stage}</div>
+            <div className="h-2 w-2 rounded-full ring-1 ring-purple-30"></div>
+            <div className="text- capitalize text-gray-400">
+              {points} Points
+            </div>
+            <div className="h-2 w-2 rounded-full ring-1 ring-purple-30"></div>
+            <div className="text- capitalize text-gray-400">{level} Levels</div>
           </div>
         </div>
       </div>
