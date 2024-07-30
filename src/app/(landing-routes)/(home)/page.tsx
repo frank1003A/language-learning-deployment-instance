@@ -5,7 +5,9 @@ function page() {
   return (
     <div className="relative flex h-full w-full flex-col">
       <HeroSection />
-      <LearningGoalModal />
+      <div id="#modal">
+        <LearningGoalModal />
+      </div>
     </div>
   );
 }
