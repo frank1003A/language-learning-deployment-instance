@@ -15,7 +15,7 @@ const LightNav = () => {
   }, []);
 
   return (
-    <nav className="text-black h-16 px-3 md:h-20 md:p-0">
+    <nav className="h-16 px-3 text-black md:h-20 md:p-0">
       <div className="mx-auto mt-14 flex max-w-[1136px] items-center justify-between rounded-[60px] border border-[#DEE5ED] px-5 py-4 shadow md:mt-9">
         {/* Desktop Navigation */}
         <div className="hidden w-full items-center justify-between md:flex">
@@ -45,7 +45,7 @@ const LightNav = () => {
                       height={16}
                     />
                   </Popover.Button>
-                  <Popover.Panel className="ring-black absolute left-[-70px] z-10 mt-2 w-[243px] rounded-[12px] bg-white shadow-lg ring-1 ring-opacity-5">
+                  <Popover.Panel className="absolute left-[-70px] z-10 mt-2 w-[243px] rounded-[12px] bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                     <Link
                       href="/"
                       className="flex gap-3 border-b border-gray-200 px-4 py-[15px] text-sm text-[#102843]"
@@ -132,7 +132,7 @@ const LightNav = () => {
                         height={16}
                       />
                     </Popover.Button>
-                    <Popover.Panel className="ring-black absolute right-0 mt-2 w-[343px] rounded-t-[12px] bg-white shadow-lg ring-1 ring-opacity-5">
+                    <Popover.Panel className="absolute right-0 mt-2 w-[343px] rounded-t-[12px] bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                       <div className="flex h-full flex-col gap-1 rounded-t-[12px] bg-[#2A2A2A] p-4">
                         <h3 className="text-[18px] font-medium text-white">
                           JohnDoe
@@ -239,7 +239,7 @@ const LightNav = () => {
                       height={36}
                     />
                   </Popover.Button>
-                  <Popover.Panel className="ring-black absolute right-0 mt-3 w-[283px] rounded-t-[12px] bg-white shadow-lg ring-1 ring-opacity-5">
+                  <Popover.Panel className="absolute right-0 mt-3 w-[283px] rounded-t-[12px] bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="flex h-full flex-col gap-1 rounded-t-[12px] bg-[#2A2A2A] p-4">
                       <h3 className="text-[18px] font-medium text-white">
                         JohnDoe

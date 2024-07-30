@@ -1,10 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+
 import DarkNav from "./DarkNav";
 
 import "@testing-library/jest-dom";
 
-describe("DarkNav", () => {
+describe("darkNav", () => {
   it("renders desktop logo", () => {
     expect.assertions(1);
     render(<DarkNav />);
@@ -18,5 +19,4 @@ describe("DarkNav", () => {
     const mobileLogo = screen.getByAltText("mobile-logo");
     expect(mobileLogo).toBeInTheDocument();
   });
-
 });
