@@ -11,6 +11,7 @@ import { DefaultPreButton } from "~/components/preview-buttons/Default";
 import { DisabledPreButton } from "~/components/preview-buttons/Disabled";
 import { FocussedPreButton } from "~/components/preview-buttons/Focussed";
 import { LoadedPreButton } from "~/components/preview-buttons/Loaded";
+import Toasts from "~/components/toasts/Toasts";
 import Accordion from "~/components/ui/CustomAccordion";
 
 const StyleGuide: FC = () => {
@@ -740,6 +741,13 @@ const StyleGuide: FC = () => {
         </div>
       </div>
 
+      <div className="flex flex-col gap-[20px]">
+        <h2 className="text-2xl font-semibold">Alerts</h2>
+
+        <div className="">
+          <Toasts variant="default" textDescription="An alert goes here" />
+        </div>
+      </div>
       {/* Modals */}
       <div className="flex flex-col gap-3 py-5">
         <h2 className="text-2xl font-semibold">Custom Modals</h2>

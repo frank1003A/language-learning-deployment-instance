@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Lilita_One } from "next/font/google";
 
+import { ToastProvider } from "~/components/ui/toast";
+
 import "./globals.css";
 
 import Progress_bar from "~/components/progress-bar";
@@ -26,9 +28,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className}`}>
         <div className="mx-auto w-full max-w-[1440px]">
-          <Progress_bar />
-          {children}
-          <Toaster />
+          <ToastProvider>
+            <Progress_bar />
+            {children}
+            <Toaster />
+          </ToastProvider>
         </div>
       </body>
     </html>
