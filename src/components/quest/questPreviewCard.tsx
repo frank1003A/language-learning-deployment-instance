@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { QuestPreviewCardDataProperties } from "./data/DummyData";
 
 const QuestPreviewCard = ({
@@ -29,7 +30,7 @@ const QuestPreviewCard = ({
             {title}
           </h4>
 
-          <div className="font-inter flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center gap-2 font-inter">
             <div className="text-xs capitalize text-gray-400">
               Stage {stage}
             </div>
@@ -44,7 +45,7 @@ const QuestPreviewCard = ({
           </div>
           <div className="mt-2">
             <Link href={`/quest`} className="no-underline outline-none">
-              <div className="font-inter w-full rounded-full bg-primary-10 px-4 py-2 text-center text-sm font-semibold capitalize text-primary-100 ring-1 ring-transparent duration-300 ease-in hover:ring-primary-100">
+              <div className="w-full rounded-full bg-primary-10 px-4 py-2 text-center font-inter text-sm font-semibold capitalize text-primary-100 ring-1 ring-transparent duration-300 ease-in hover:ring-primary-100">
                 Preview Quest
               </div>
             </Link>
