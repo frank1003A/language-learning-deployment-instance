@@ -28,9 +28,9 @@ const Accordion: React.FC<AccordionProperties> = ({
         className="flex cursor-pointer flex-col gap-3 rounded-2xl p-4 shadow"
         onClick={toggleAccordion}
       >
-        <div className="flex items-center">
+              <div className="flex items-center gap-3 flex-row">
           <span
-            className={`mr-2 transform rounded-full border p-1 transition-transform duration-300 ${
+            className={`mr-2 transform rounded-full  border p-1 transition-transform duration-300 ${
               isOpen ? "rotate-180" : ""
             }`}
           >
@@ -40,7 +40,7 @@ const Accordion: React.FC<AccordionProperties> = ({
               <Plus size={16} className="text-primary-100" />
             )}
           </span>
-          <span className="font-Lilita-One font-bold text-secondary-120">
+          <span className="font-lilita text-[18px] font-medium text-secondary-120">
             {title}
           </span>
         </div>
@@ -50,7 +50,7 @@ const Accordion: React.FC<AccordionProperties> = ({
             isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="font-axiforma-medium mx-auto w-[90%] border-t p-4">
+                  <div className="font-axiformaMedium mx-auto w-[90%] border-t p-4">
             <p>{content}</p>
           </div>
         </div>
