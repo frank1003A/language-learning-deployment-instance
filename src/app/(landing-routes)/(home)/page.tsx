@@ -6,7 +6,7 @@ import LearningGoalModal from "~/components/modals/LearningGoalModal";
 
 function page() {
   return (
-    <div className="relative flex h-full w-full flex-col">
+    <div className="relative flex h-full w-full flex-col overflow-x-hidden">
       <HeroSection />
       <div className="mt-10 flex w-full justify-between" id="temporary">
         <Link href={"/waitlist"}>
