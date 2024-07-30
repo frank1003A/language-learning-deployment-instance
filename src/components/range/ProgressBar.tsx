@@ -2,19 +2,15 @@ import { Line } from "rc-progress";
 import React from "react";
 
 type DisplayProperties = {
-  starCount?: number;
   percent: number;
   strokeWidth: number;
   strokeColor: string;
-  starWidth?: number;
 };
 
 const ProgressBar: React.FC<DisplayProperties> = ({
-  starCount,
   percent,
   strokeWidth,
   strokeColor,
-  starWidth,
 }) => {
   return (
     <div>
