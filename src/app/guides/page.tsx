@@ -748,7 +748,7 @@ const StyleGuide: FC = () => {
         </div>
       </div>
 
-      <h2 className="text-2xl font-semibold mb-[20px]">Accordion</h2>
+      <h2 className="mb-[20px] text-2xl font-semibold">Accordion</h2>
       <Accordion
         title="Accordion Heading"
         content="These cookies are crucial for the website's basic functionality and cannot be disabled. They ensure that the website operates correctly and securely."
