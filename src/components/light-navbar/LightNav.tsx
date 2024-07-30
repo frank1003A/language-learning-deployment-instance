@@ -1,4 +1,4 @@
-import { ChevronDown } from "lucide-react";
+import { AlignJustify, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 import {
@@ -35,10 +35,10 @@ const LightNav = () => {
   return (
     <>
       <nav className="fixed left-0 right-0 top-0 z-50 w-screen">
-        <div className="mx-auto my-4 flex max-w-3xl flex-row items-center justify-between rounded-full bg-white p-2.5 pl-5 shadow ring-1 ring-primary-20">
+        <div className="mx-auto my-4 flex max-w-[350px] flex-row items-center rounded-full bg-white p-2.5 pl-5 shadow-md ring-1 ring-gray-200 md:max-w-xl md:justify-between md:shadow md:ring-primary-20 lg:max-w-3xl">
           <Logo />
 
-          <div className="flex items-center gap-7">
+          <div className="hidden items-center gap-5 md:flex lg:gap-7">
             {navbarLinks.map((links, index) => {
               const { isActive, linkPath, title } = links;
 
@@ -71,19 +71,26 @@ const LightNav = () => {
             </DropdownMenu>
           </div>
 
-          <div className="flex flex-row gap-4">
+          <div className="ml-auto flex flex-row gap-2 md:ml-0 lg:gap-4">
             <Link href={"/sign-up"} className="no-underline outline-none">
-              <button className="rounded-full bg-black px-6 py-2.5 font-lilita text-sm font-semibold text-white outline-none ring-1 ring-black">
+              <button className="rounded-full bg-black px-5 py-2 font-lilita text-sm font-semibold text-white outline-none ring-1 ring-black lg:px-6 lg:py-2.5">
                 Sign Up
               </button>
             </Link>
 
-            <Link href={"/sign-in"} className="no-underline outline-none">
-              <button className="text-black-140 rounded-full bg-white px-6 py-2.5 font-lilita text-sm font-semibold ring-1 ring-gray-200">
+            <Link
+              href={"/sign-in"}
+              className="hidden no-underline outline-none md:block"
+            >
+              <button className="text-black-140 rounded-full bg-white px-5 py-2 font-lilita text-sm font-semibold ring-1 ring-gray-200 lg:px-6 lg:py-2.5">
                 Sign In
               </button>
             </Link>
           </div>
+
+          <button className="ml-2 flex h-8 w-8 items-center justify-center rounded-full text-gray-400 outline-none ring-1 ring-gray-200 md:ml-0 md:hidden">
+            <AlignJustify size={16} />
+          </button>
         </div>
       </nav>
     </>
