@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div className="flex h-full basis-1/2 flex-col justify-center">
         <div className="ml-auto w-full max-w-[630px]">
           <h1
-            className={`font-fira text-7xl font-semibold leading-[75px] text-black ${fira_sans.className}`}
+            className={`font-fira text-black text-7xl font-semibold leading-[75px] ${fira_sans.className}`}
           >
             Learning Made Fun With Gaming
           </h1>
@@ -23,26 +23,26 @@ const HeroSection = () => {
       </div>
 
       <div className="grid h-full basis-1/2 grid-cols-2 gap-1 bg-[#ffe0bc]">
-        <div className="relative h-[323px] w-full overflow-hidden bg-heroImageOne bg-cover bg-top bg-no-repeat">
-          <div className="absolute bottom-0 left-0 right-0 mx-auto my-3 w-[300px] overflow-hidden whitespace-nowrap bg-gray-300 bg-opacity-80 p-3 text-center font-inter text-sm text-black">
+        <div className="bg-heroImageOne relative h-[323px] w-full overflow-hidden bg-cover bg-top bg-no-repeat">
+          <div className="text-black absolute bottom-0 left-0 right-0 mx-auto my-3 w-[300px] overflow-hidden whitespace-nowrap bg-gray-300 bg-opacity-80 p-3 text-center font-inter text-sm">
             Save the baby from the burning building
           </div>
         </div>
 
-        <div className="relative h-[323px] w-full overflow-hidden bg-heroImageTwo bg-cover bg-top bg-no-repeat">
-          <div className="absolute bottom-0 left-0 right-0 mx-auto my-3 w-[300px] overflow-hidden whitespace-nowrap bg-gray-300 bg-opacity-80 p-3 text-center font-inter text-sm text-black">
+        <div className="bg-heroImageTwo relative h-[323px] w-full overflow-hidden bg-cover bg-top bg-no-repeat">
+          <div className="text-black absolute bottom-0 left-0 right-0 mx-auto my-3 w-[300px] overflow-hidden whitespace-nowrap bg-gray-300 bg-opacity-80 p-3 text-center font-inter text-sm">
             Get off the Tahiti island or die trying
           </div>
         </div>
 
-        <div className="relative h-[323px] w-full overflow-hidden bg-heroImageThree bg-cover bg-top bg-no-repeat">
-          <div className="absolute bottom-0 left-0 right-0 mx-auto my-3 w-[300px] overflow-hidden whitespace-nowrap bg-gray-300 bg-opacity-80 p-3 text-center font-inter text-sm text-black">
+        <div className="bg-heroImageThree relative h-[323px] w-full overflow-hidden bg-cover bg-top bg-no-repeat">
+          <div className="text-black absolute bottom-0 left-0 right-0 mx-auto my-3 w-[300px] overflow-hidden whitespace-nowrap bg-gray-300 bg-opacity-80 p-3 text-center font-inter text-sm">
             Save the injured cyclist
           </div>
         </div>
 
-        <div className="relative h-[323px] w-full overflow-hidden bg-heroImageFour bg-cover bg-top bg-no-repeat">
-          <div className="absolute bottom-0 left-0 right-0 mx-auto my-3 w-[300px] overflow-hidden whitespace-nowrap bg-gray-300 bg-opacity-80 p-3 text-center font-inter text-sm text-black">
+        <div className="bg-heroImageFour relative h-[323px] w-full overflow-hidden bg-cover bg-top bg-no-repeat">
+          <div className="text-black absolute bottom-0 left-0 right-0 mx-auto my-3 w-[300px] overflow-hidden whitespace-nowrap bg-gray-300 bg-opacity-80 p-3 text-center font-inter text-sm">
             Catch the flight or get fired
           </div>
         </div>
