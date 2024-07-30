@@ -54,134 +54,27 @@ Open ``` http://localhost:3000/guides ``` to see the components and style guides
 Once the development server is running, you can start exploring the game and developing new features. The main entry point of the application is ``` (landing-routes)/(home)/pages.tsx ```.
 
 ### Project Structure
-public
-│
-├── admin-dashboard
-├── email
-├── games
-├── home
-├── images
-├── logo
-├── passwordCriteria
-├── product
-├── signup
-│
-├── 404.gif
-├── next.svg
-└── vercel.svg
-
-src
-│
-├── app
-│   ├── auth-routes
-│   │   ├── login.tsx
-│   │   ├── signup.tsx
-│   │   ├── forgot-password.tsx
-│   │   └── reset-password.tsx
-│   │
-│   ├── landing-routes
-│   │   ├── index.tsx (Landing Page)
-│   │   ├── about.tsx
-│   │   ├── pricing.tsx
-│   │   ├── help.tsx
-│   │   ├── legal
-│   │   │   ├── privacy-policy.tsx
-│   │   │   └── terms-and-conditions.tsx
-│   │   └── trial
-│   │       ├── index.tsx (Squeeze Page)
-│   │       ├── waitlist.tsx
-│   │       └── refer.tsx
-│   │
-│   ├── guides
-│   │   ├── getting-started.md
-│   │   ├── faq.md
-│   │   └── troubleshooting.md
-│   │
-│   ├── dashboard
-│   │   ├── index.tsx
-│   │   ├── profile.tsx
-│   │   ├── settings
-│   │   │   ├── profile.tsx
-│   │   │   ├── account-security.tsx
-│   │   │   ├── payment-information.tsx
-│   │   │   ├── notification.tsx
-│   │   │   └── data-and-privacy.tsx
-│   │   │
-│   │   ├── products
-│   │   │   ├── index.tsx
-│   │   │   ├── add.tsx
-│   │   │   └── [id].tsx
-│   │   │
-│   │   ├── analytics.tsx
-│   │   └── subscriptions.tsx
-│   │
-│   ├── admin
-│   │   ├── index.tsx (Admin Dashboard)
-│   │   ├── users.tsx
-│   │   ├── email-templates.tsx
-│   │   ├── settings.tsx
-│   │   └── waitlist.tsx
-│   │
-│   ├── game
-│   │   ├── index.tsx (Game Home)
-│   │   ├── quest.tsx
-│   │   ├── delve.tsx
-│   │   ├── progress.tsx
-│   │   └── [stage].tsx (Dynamic Route for Game Stages)
-│   │
-│   ├── favicon.ico
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── not-found.tsx
-│
-├── components
-│   ├── common
-│   │   ├── Button
-│   │   │   └── button.tsx
-│   │   ├── Modal
-│   │   │   └── modal.tsx
-│   │   └── Navbar
-│   │       └── navbar.tsx
-│   │
-│   ├── game
-│   │   ├── GameCard.tsx
-│   │   ├── GameStats.tsx
-│   │   └── GameOverlay.tsx
-│   │
-│   ├── admin
-│   │   ├── AdminNavbar.tsx
-│   │   ├── UserCard.tsx
-│   │   └── Graph.tsx
-│   │
-│   ├── landing
-│   │   ├── HeroSection.tsx
-│   │   ├── FeaturesSection.tsx
-│   │   └── Testimonials.tsx
-│   │
-│   └── forms
-│       ├── LoginForm.tsx
-│       ├── SignupForm.tsx
-│       └── PasswordResetForm.tsx
-│
-├── fonts
-│   ├── Inter
-│   └── LilitaOne
-│
-├── hooks
-│   ├── useAuth.ts
-│   ├── useGameProgress.ts
-│   └── useFetch.ts
-│
-├── lib
-│   ├── firebase.ts
-│   ├── api.ts
-│   └── utils.ts
-│
-└── test
-    ├── auth.test.ts
-    ├── game.test.ts
-    └── utils.test.ts
-
+- ```app/ ```: Contains the Next.js pages.
+    - auth-routes/
+    - landing-routes/
+      - legal/
+    - guides/
+    - dashboard/
+      - products/
+      - settings/
+    - admin/
+    - game/
+- ```components/ ```: Contains React components used throughout the application.
+    - common/
+    - game/
+    - admin/
+    - landing/
+    - forms/
+- ``` styles/ ```: Contains the CSS and styling files.
+- ```fonts/ ```
+- ```hooks/ ```
+- ``` utils/ ```: Contains utility functions and helpers.
+- ``` test/ ```
 
 ### Scripts
 - ```pnpm dev```: Runs the development server.
