@@ -1,64 +1,64 @@
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
-import Sidebar from './sideBar';
-import { usePathname } from 'next/navigation';
-import progress from '../../../public/userSidebarNav/progress.png';
-import learningRoom from '../../../public/userSidebarNav/learningRoom.png';
-import achievements from '../../../public/userSidebarNav/achievements.png';
-import leaderboards from '../../../public/userSidebarNav/leaderboard.png';
-import challenges from '../../../public/userSidebarNav/challenges.png';
-import logout from '../../../public/userSidebarNav/logout.png';
+import { render, screen } from "@testing-library/react";
+import { usePathname } from "next/navigation";
+import { describe, expect, it, vi } from "vitest";
+
+import achievements from "../../../public/userSidebarNav/achievements.png";
+import challenges from "../../../public/userSidebarNav/challenges.png";
+import leaderboards from "../../../public/userSidebarNav/leaderboard.png";
+import learningRoom from "../../../public/userSidebarNav/learningRoom.png";
+import progress from "../../../public/userSidebarNav/progress.png";
+import Sidebar from "./sideBar";
 
 // Mock usePathname
-vi.mock('next/navigation', () => ({
+vi.mock("next/navigation", () => ({
   usePathname: vi.fn(),
 }));
 
 const sideItems = [
   {
-    route: 'Learning Room',
-    link: '/learningRoom',
+    route: "Learning Room",
+    link: "/learningRoom",
     icon: learningRoom,
-    id: 'Learning',
+    id: "Learning",
   },
   {
-    route: 'Progress Tracking',
-    link: '/progress',
+    route: "Progress Tracking",
+    link: "/progress",
     icon: progress,
-    id: 'Progress',
+    id: "Progress",
   },
   {
-    route: 'Achievements',
-    link: '/achievements',
+    route: "Achievements",
+    link: "/achievements",
     icon: achievements,
-    id: 'Achievements',
+    id: "Achievements",
   },
   {
-    route: 'Leaderboards',
-    link: '/leaderboard',
+    route: "Leaderboards",
+    link: "/leaderboard",
     icon: leaderboards,
-    id: 'Leaderboards',
+    id: "Leaderboards",
   },
   {
-    route: 'Challenges',
-    link: '/challenges',
+    route: "Challenges",
+    link: "/challenges",
     icon: challenges,
-    id: 'Challenges',
+    id: "Challenges",
   },
 ];
 
-describe('Sidebar Component', () => {
-  it('should render sidebar links based on sideNavitems', () => {
+describe("sidebar Component", () => {
+  it("should render sidebar links based on sideNavitems", () => {
     // Set the mock return value for usePathname
-    (usePathname as unknown as jest.Mock).mockReturnValue('/some/path');
+    (usePathname as unknown as jest.Mock).mockReturnValue("/some/path");
 
     // Render the Sidebar component
     render(<Sidebar sideNavitems={sideItems} currenPathName="/some/path" />);
 
     // Check if all sidebar items are rendered
-    sideItems.forEach((item) => {
+    for (const item of sideItems) {
       expect(screen.getByTestId(item.id)).toBeInTheDocument();
       expect(screen.getByAltText(`${item.route} icon`)).toBeInTheDocument();
-    });
+    }
   });
 });
