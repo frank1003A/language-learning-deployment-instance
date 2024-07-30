@@ -10,7 +10,6 @@ const QuestPreviewCard = ({
   points,
   stage,
   title,
-  path,
 }: QuestPreviewCardDataProperties) => {
   return (
     <>
@@ -44,7 +43,10 @@ const QuestPreviewCard = ({
             </div>
           </div>
           <div className="mt-2">
-            <Link href={`/quest`} className="no-underline outline-none">
+            <Link
+              href={`/quest/game/${id}`}
+              className="no-underline outline-none"
+            >
               <div className="w-full rounded-full bg-primary-10 px-4 py-2 text-center font-inter text-sm font-semibold capitalize text-primary-100 ring-1 ring-transparent duration-300 ease-in hover:ring-primary-100">
                 Preview Quest
               </div>
