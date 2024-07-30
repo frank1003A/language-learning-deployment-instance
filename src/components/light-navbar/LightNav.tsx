@@ -1,3 +1,4 @@
+import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 import {
@@ -45,7 +46,7 @@ const LightNav = () => {
                 <Link
                   key={index}
                   href={linkPath}
-                  className={`text-sm no-underline outline-none duration-300 ease-in hover:text-neutral-120 ${isActive ? "text-neutral-120" : "text-neutral-80"}`}
+                  className={`font-inter text-sm no-underline outline-none duration-300 ease-in hover:text-neutral-120 ${isActive ? "text-neutral-120" : "text-neutral-80"}`}
                 >
                   {title}
                 </Link>
@@ -53,11 +54,13 @@ const LightNav = () => {
             })}
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={`text-sm text-neutral-80 no-underline outline-none duration-300 ease-in`}
+                className={`flex flex-row items-center gap-1 font-inter text-sm text-neutral-80 no-underline outline-none duration-300 ease-in`}
               >
-                About
+                <div>About</div>
+
+                <ChevronDown size={16} />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-[200px] rounded-xl bg-white ring-1 ring-blue-200">
+              <DropdownMenuContent className="w-[200px] rounded-xl border border-blue-200 bg-white shadow-sm">
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>Profile</DropdownMenuItem>
@@ -70,7 +73,7 @@ const LightNav = () => {
 
           <div className="flex flex-row gap-4">
             <Link href={"/sign-up"} className="no-underline outline-none">
-              <button className="rounded-full bg-black-140 px-6 py-2.5 font-lilita text-sm font-semibold text-white outline-none ring-1 ring-black-140">
+              <button className="bg-black ring-black rounded-full px-6 py-2.5 font-lilita text-sm font-semibold text-white outline-none ring-1">
                 Sign Up
               </button>
             </Link>
