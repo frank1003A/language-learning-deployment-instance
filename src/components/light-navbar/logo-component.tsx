@@ -4,12 +4,21 @@ import Link from "next/link";
 const Logo = () => {
   return (
     <>
-      <Link href="/" className="no-underline outline-none">
+      <Link href="/" className="hidden no-underline outline-none md:block">
         <Image
           src="/images/_Logo.svg"
           width={100}
           height={32}
-          alt="delve logo"
+          alt="desktop-logo"
+        />
+      </Link>
+
+      <Link href="/" className="block no-underline outline-none md:hidden">
+        <Image
+          src="/images/_Logo.svg"
+          width={100}
+          height={32}
+          alt="mobile-logo"
         />
       </Link>
     </>
