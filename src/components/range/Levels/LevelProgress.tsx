@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import ProgressBar from "../ProgressBar";
 
-type DisplayProps = {
+type DisplayProperties = {
   starCount: number;
   percent: number;
   strokeWidth: number;
@@ -10,7 +10,7 @@ type DisplayProps = {
   starWidth: number;
 };
 
-const LevelProgress: React.FC<DisplayProps> = ({
+const LevelProgress: React.FC<DisplayProperties> = ({
   starCount,
   percent,
   strokeWidth,

@@ -1,7 +1,7 @@
 import { Line } from "rc-progress";
 import React from "react";
 
-type DisplayProps = {
+type DisplayProperties = {
   starCount?: number;
   percent: number;
   strokeWidth: number;
@@ -9,7 +9,7 @@ type DisplayProps = {
   starWidth?: number;
 };
 
-const ProgressBar: React.FC<DisplayProps> = ({
+const ProgressBar: React.FC<DisplayProperties> = ({
   starCount,
   percent,
   strokeWidth,
