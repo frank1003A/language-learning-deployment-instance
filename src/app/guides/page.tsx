@@ -4,6 +4,7 @@ import { Orbit, PlusIcon } from "lucide-react";
 import { FC } from "react";
 
 import CustomButton from "~/components/common/common-button/common-button";
+import { Cookies } from "~/components/modals/cookies";
 import { ConnectedPreButton } from "~/components/preview-buttons/Connected";
 import { DefaultPreButton } from "~/components/preview-buttons/Default";
 import { DisabledPreButton } from "~/components/preview-buttons/Disabled";
@@ -726,6 +727,10 @@ const StyleGuide: FC = () => {
           <ConnectedPreButton />
         </div>
       </div>
+
+      {/* Modals */}
+      <h2 className="text-2xl font-semibold">Modals</h2>
+      <Cookies />
     </main>
   );
 };
