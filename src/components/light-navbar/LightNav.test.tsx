@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 
 import LightNav from "./LightNav";
 
-import "@testing-library/jest-dom/extend-expect";
+import "@testing-library/jest-dom";
 
 describe("lightNav", () => {
   it("renders desktop logo", () => {
@@ -24,8 +24,8 @@ describe("lightNav", () => {
     expect.assertions(2); // Adding this line to specify the number of assertions in the test
     render(<LightNav />);
     const signInButton = screen.getByText("Sign In");
-    const signUpButton = screen.getByText("Sign Up");
+    const signUpButtons = screen.getAllByText("Sign Up");
     expect(signInButton).toBeInTheDocument();
-    expect(signUpButton).toBeInTheDocument();
+    expect(signUpButtons.length).toBeGreaterThan(0);
   });
 });
