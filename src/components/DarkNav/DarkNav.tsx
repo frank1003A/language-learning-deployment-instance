@@ -1,10 +1,8 @@
 "use client";
 
-import { Popover } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
 
 const DarkNav = () => {
   const [isSignedIn, setIsSignedIn] = useState(true);
@@ -32,90 +30,11 @@ const DarkNav = () => {
           <div className="flex space-x-[56px] text-base font-normal text-transparent-white-70 ">
             <Link href="/">Home</Link>
             <Link href="/">Games</Link>
-            <Popover className="relative">
-              {({ open }) => (
-                <>
-                  <Popover.Button className="focus:ring-none flex items-center gap-1 focus:border-none focus:outline-none">
-                    About
-                    <Image
-                      src={open ? "/logo/about-up.svg" : "/logo/about-down.svg"}
-                      alt="about-arrow"
-                      width={16}
-                      height={16}
-                    />
-                  </Popover.Button>
-                  <Popover.Panel className="ring-black absolute left-[-70px] z-10 mt-2 w-[243px] rounded-[12px] bg-white shadow-lg ring-1 ring-opacity-5">
-                    <Link
-                      href="/"
-                      className="flex gap-3 border-b border-gray-200 px-4 py-[15px] text-sm text-[#102843]"
-                    >
-                      <Image
-                        src="/logo/about-menu/howitworks.svg"
-                        alt="howitworks-icon"
-                        width={16}
-                        height={16}
-                      />
-                      How It Works
-                    </Link>
-                    <Link
-                      href="/"
-                      className="flex gap-3 border-b border-gray-200 px-4 py-[15px] text-sm text-[#102843]"
-                    >
-                      <Image
-                        src="/logo/about-menu/waitlist.svg"
-                        alt="waitlist-icon"
-                        width={16}
-                        height={16}
-                      />
-                      Waitlist
-                    </Link>
-                    <Link
-                      href="/"
-                      className="flex gap-3 border-b border-gray-200 px-4 py-[15px] text-sm text-[#102843]"
-                    >
-                      <Image
-                        src="/logo/about-menu/invitelink.svg"
-                        alt="invitelink-icon"
-                        width={16}
-                        height={16}
-                      />
-                      Invite Link
-                    </Link>
-                    <Link
-                      href="/"
-                      className="flex gap-3 border-b-8 border-[#FFF2E5] px-4 py-[15px] text-sm text-[#102843]"
-                    >
-                      <Image
-                        src="/logo/about-menu/contactus.svg"
-                        alt="contactus-icon"
-                        width={16}
-                        height={16}
-                      />
-                      Contact Us
-                    </Link>
-                    <Link
-                      href="/"
-                      className="flex gap-3 px-4 py-[15px] text-sm text-[#102843]"
-                    >
-                      <Image
-                        src="/logo/about-menu/privacypolicy.svg"
-                        alt="privacypolicy-icon"
-                        width={16}
-                        height={16}
-                      />
-                      Privacy Policy
-                    </Link>
-                  </Popover.Panel>
-                </>
-              )}
-            </Popover>
+            <Link href="/">About</Link>
           </div>
           <div className="flex space-x-6">
             {isSignedIn ? (
-              <Popover className="relative">
-                {({ open }) => (
-                  <>
-                    <Popover.Button className="flex h-full w-full items-center gap-1 rounded-[40px] border-2 bg-transparent-black-25 border-transparent-white-15 px-[10px] py-1">
+              <div className="flex h-full w-full items-center gap-1 rounded-[40px] border-2 bg-transparent-black-25 border-transparent-white-15 px-[10px] py-1">
                       <Image
                         src="/logo/profile.svg"
                         alt="profile-icon"
@@ -123,85 +42,13 @@ const DarkNav = () => {
                         height={40}
                       />
                       <Image
-                        src={
-                          open ? "/logo/about-up.svg" : "/logo/about-down.svg"
-                        }
+                        src= "/logo/about-down.svg"
                         alt="profile-arrow"
                         width={16}
                         height={16}
                       />
-                    </Popover.Button>
-                    <Popover.Panel className="ring-black absolute right-0 mt-2 w-[343px] rounded-t-[12px] bg-white shadow-lg ring-1 ring-opacity-5">
-                      <div className="flex h-full flex-col gap-1 rounded-t-[12px] bg-[#2A2A2A] p-4">
-                        <h3 className="text-[18px] font-medium text-white">
-                          JohnDoe
-                        </h3>
-                        <p className="text-[#B1C2D5]">johndoe@gmail.com</p>
-                      </div>
-                      <Link
-                        href="/"
-                        className="flex gap-3 px-4 py-[15px] text-sm text-[#102843] hover:bg-gray-100"
-                      >
-                        <Image
-                          src="/logo/profile-menu/Dashboard.svg"
-                          alt="notifications-icon"
-                          width={16}
-                          height={16}
-                        />
-                        Dashboard
-                      </Link>
-                      <Link
-                        href="/"
-                        className="flex gap-3 px-4 py-[15px] text-sm text-[#102843] hover:bg-gray-100"
-                      >
-                        <Image
-                          src="/logo/profile-menu/points.svg"
-                          alt="points-icon"
-                          width={16}
-                          height={16}
-                        />
-                        Points & Badges
-                      </Link>
-                      <Link
-                        href=""
-                        className="flex gap-3 px-4 py-[15px] text-sm text-[#102843] hover:bg-gray-100"
-                      >
-                        <Image
-                          src="/logo/profile-menu/settings.svg"
-                          alt="settings-icon"
-                          width={16}
-                          height={16}
-                        />
-                        Settings
-                      </Link>
-                      <Link
-                        href="/"
-                        className="flex gap-3 border-b-8 border-[#FFF2E5] px-4 py-[15px] text-sm text-[#102843] hover:bg-gray-100"
-                      >
-                        <Image
-                          src="/logo/profile-menu/notification.svg"
-                          alt="notifications-icon"
-                          width={16}
-                          height={16}
-                        />
-                        Notifications
-                      </Link>
-                      <Link
-                        href="/"
-                        className="text-red flex gap-3 px-4 py-[15px] text-sm hover:bg-gray-100"
-                      >
-                        <Image
-                          src="/logo/profile-menu/signout.svg"
-                          alt="signout-icon"
-                          width={16}
-                          height={16}
-                        />
-                        Sign Out
-                      </Link>
-                    </Popover.Panel>
-                  </>
-                )}
-              </Popover>
+              </div>
+
             ) : (
               <>
                 <button className="h-12 w-[132px] rounded-[59px] border border-primary-120 bg-primary-100 text-white">
@@ -228,86 +75,14 @@ const DarkNav = () => {
           </div>
           <div className="flex items-center space-x-4">
             {isSignedIn ? (
-              <Popover className="relative">
-                <>
-                  <Popover.Button className="h-full w-full rounded-full border-2 border-transparent-black-10 p-[2px]">
+                  <div className="h-full w-full rounded-full border-2 border-transparent-black-10 p-[2px]">
                     <Image
                       src="/logo/profile.svg"
                       alt="profile-icon"
                       width={38}
                       height={38}
                     />
-                  </Popover.Button>
-                  <Popover.Panel className="ring-black absolute right-0 mt-3 w-[283px] rounded-t-[12px] bg-white shadow-lg ring-1 ring-opacity-5">
-                    <div className="flex h-full flex-col gap-1 rounded-t-[12px] bg-[#2A2A2A] p-4">
-                      <h3 className="text-[18px] font-medium text-white">
-                        JohnDoe
-                      </h3>
-                      <p className="text-[#B1C2D5]">johndoe@gmail.com</p>
-                    </div>
-                    <Link
-                      href="/"
-                      className="flex gap-3 px-4 py-[15px] text-sm text-[#102843] hover:bg-gray-100"
-                    >
-                      <Image
-                        src="/logo/profile-menu/Dashboard.svg"
-                        alt="Dashboard-icon"
-                        width={16}
-                        height={16}
-                      />
-                      Dashboard
-                    </Link>
-                    <Link
-                      href="/"
-                      className="flex gap-3 px-4 py-[15px] text-sm text-[#102843] hover:bg-gray-100"
-                    >
-                      <Image
-                        src="/logo/profile-menu/points.svg"
-                        alt="points-icon"
-                        width={16}
-                        height={16}
-                      />
-                      Points & Badges
-                    </Link>
-                    <Link
-                      href="/"
-                      className="flex gap-3 px-4 py-[15px] text-sm text-[#102843] hover:bg-gray-100"
-                    >
-                      <Image
-                        src="/logo/profile-menu/settings.svg"
-                        alt="settings-icon"
-                        width={16}
-                        height={16}
-                      />
-                      Settings
-                    </Link>
-                    <Link
-                      href="/"
-                      className="flex gap-3 border-b-8 border-[#FFF2E5] px-4 py-[15px] text-sm text-[#102843] hover:bg-gray-100"
-                    >
-                      <Image
-                        src="/logo/profile-menu/notification.svg"
-                        alt="notifications-icon"
-                        width={16}
-                        height={16}
-                      />
-                      Notifications
-                    </Link>
-                    <Link
-                      href="/"
-                      className="text-red flex gap-3 px-4 py-[15px] text-sm hover:bg-gray-100"
-                    >
-                      <Image
-                        src="/logo/profile-menu/signout.svg"
-                        alt="signout-icon"
-                        width={16}
-                        height={16}
-                      />
-                      Sign Out
-                    </Link>
-                  </Popover.Panel>
-                </>
-              </Popover>
+                  </div>
             ) : (
               <>
                 <button className="h-10 w-[109px] rounded-[59px] border border-primary-120 bg-primary-100 text-white">

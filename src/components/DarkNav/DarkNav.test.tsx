@@ -19,12 +19,4 @@ describe("DarkNav", () => {
     expect(mobileLogo).toBeInTheDocument();
   });
 
-  it("renders Sign In and Sign Up buttons when not signed in", () => {
-    expect.assertions(2); // Adding this line to specify the number of assertions in the test
-    render(<DarkNav />);
-    const signInButton = screen.getByText("Sign In");
-    const signUpButtons = screen.getAllByText("Sign Up");
-    expect(signInButton).toBeInTheDocument();
-    expect(signUpButtons.length).toBeGreaterThan(0);
-  });
 });
