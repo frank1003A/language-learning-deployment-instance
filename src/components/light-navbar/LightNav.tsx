@@ -121,7 +121,7 @@ const LightNav = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="mx-auto my-4 flex h-[64px] w-full max-w-[351px] items-center justify-between rounded-[60px] border border-neutral-30 p-3 shadow-sm md:hidden">
+        <div className="mx-auto my-4 flex h-[64px] w-full max-w-[351px] items-center justify-between rounded-[60px] border border-neutral-30 bg-white p-3 shadow-sm md:hidden">
           <div className="flex items-center">
             <Link href={"/"}>
               <Image

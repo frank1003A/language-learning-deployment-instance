@@ -6,13 +6,13 @@ function page() {
   return (
     <div className="relative flex h-full w-full flex-col overflow-x-hidden">
       <HeroSection />
-      <div className="mt-10 flex flex-col gap-4 py-5" id="temporary">
-        <CustomButton href={"/waitlist"} variant="primary-two">
-          Waitlist Page
-        </CustomButton>
-        <CustomButton href={"/guides"} variant="primary-two">
-          Components
-        </CustomButton>
+      <div className="mt-10 flex flex-col gap-4 px-10 py-5" id="temporary">
+        <Link href={"/waitlist"}>
+          <CustomButton variant="primary-two">Waitlist Page</CustomButton>
+        </Link>
+        <Link href={"/guides"}>
+          <CustomButton variant="primary-two">Components</CustomButton>
+        </Link>
       </div>
       <div id="#modal">
         <LearningGoalModal />
