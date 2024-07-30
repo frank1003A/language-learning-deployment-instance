@@ -20,9 +20,7 @@ const config = {
     },
     extend: {
       colors: {
-        black: {
-          140: "rgb(var(--black-140))",
-        },
+        black: "rgb(var(--secondary-120))",
         neutral: {
           10: "rgb(var(--neutral-10))",
           20: "rgb(var(--neutral-20))",
