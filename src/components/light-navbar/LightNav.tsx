@@ -35,7 +35,7 @@ const LightNav = () => {
   return (
     <>
       <nav className="fixed left-0 right-0 top-0 z-50 w-screen">
-        <div className="mx-auto my-4 flex max-w-4xl flex-row items-center justify-between rounded-full bg-white p-2.5 pl-5 shadow ring-1 ring-primary-20">
+        <div className="mx-auto my-4 flex max-w-3xl flex-row items-center justify-between rounded-full bg-white p-2.5 pl-5 shadow ring-1 ring-primary-20">
           <Logo />
 
           <div className="flex items-center gap-7">
@@ -73,13 +73,13 @@ const LightNav = () => {
 
           <div className="flex flex-row gap-4">
             <Link href={"/sign-up"} className="no-underline outline-none">
-              <button className="bg-black ring-black rounded-full px-6 py-2.5 font-lilita text-sm font-semibold text-white outline-none ring-1">
+              <button className="rounded-full bg-black px-6 py-2.5 font-lilita text-sm font-semibold text-white outline-none ring-1 ring-black">
                 Sign Up
               </button>
             </Link>
 
             <Link href={"/sign-in"} className="no-underline outline-none">
-              <button className="rounded-full bg-white px-6 py-2.5 font-lilita text-sm font-semibold text-black-140 ring-1 ring-gray-200">
+              <button className="text-black-140 rounded-full bg-white px-6 py-2.5 font-lilita text-sm font-semibold ring-1 ring-gray-200">
                 Sign In
               </button>
             </Link>

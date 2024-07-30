@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section className="flex h-screen w-screen flex-row">
       <div className="flex h-full basis-1/2 flex-col justify-center">
-        <div className="ml-auto w-full max-w-[650px]">
+        <div className="ml-auto w-full max-w-[630px]">
           <h1
             className={`font-fira text-black text-7xl font-semibold leading-[75px] ${fira_sans.className}`}
           >
