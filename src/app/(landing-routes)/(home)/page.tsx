@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import CustomButton from "~/components/common/common-button/common-button";
 import HeroSection from "~/components/HeroSection";
 import LearningGoalModal from "~/components/modals/LearningGoalModal";
@@ -6,6 +8,14 @@ function page() {
   return (
     <div className="relative flex h-full w-full flex-col">
       <HeroSection />
+      <div className="mt-10 flex w-full justify-between" id="temporary">
+        <Link href={"/waitlist"}>
+          <CustomButton variant="primary-two">Waitlist Page</CustomButton>
+        </Link>
+        <Link href={"/guides"}>
+          <CustomButton variant="primary-two">Components</CustomButton>
+        </Link>
+      </div>
       <div id="#modal">
         <LearningGoalModal />
       </div>
