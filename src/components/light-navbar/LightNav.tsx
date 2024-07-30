@@ -54,10 +54,7 @@ const LightNav = () => {
     <>
       <nav className="fixed left-0 right-0 top-0 z-50 w-screen">
         <div className="md:max-w-4/5 lg:max-w-4/5 mx-auto my-4 hidden w-3/5 flex-row items-center rounded-full bg-white p-2.5 pl-5 shadow-md ring-1 ring-gray-200 md:flex md:justify-between md:shadow md:ring-primary-20">
-          <Link href={"/"}>
-            <Logo />
-          </Link>
-
+          <Logo />
           <div className="hidden items-center gap-5 md:flex lg:gap-7">
             {navbarLinks.map((links, index) => {
               const { isActive, linkPath, title } = links;
