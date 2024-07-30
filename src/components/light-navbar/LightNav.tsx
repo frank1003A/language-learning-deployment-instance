@@ -54,10 +54,7 @@ const LightNav = () => {
     <>
       <nav className="fixed left-0 right-0 top-0 z-50 w-screen">
         <div className="md:max-w-4/5 lg:max-w-4/5 mx-auto my-4 hidden w-3/5 flex-row items-center rounded-full bg-white p-2.5 pl-5 shadow-md ring-1 ring-gray-200 md:flex md:justify-between md:shadow md:ring-primary-20">
-          <Link href={"/"}>
-            <Logo />
-          </Link>
-
+          <Logo />
           <div className="hidden items-center gap-5 md:flex lg:gap-7">
             {navbarLinks.map((links, index) => {
               const { isActive, linkPath, title } = links;
@@ -168,9 +165,8 @@ const LightNav = () => {
         </div>
       </nav>
       <div
-        className={`fixed bottom-0 left-0 top-20 z-50 flex h-screen w-full transform flex-col justify-start border-r bg-[#FDFDFD] md:w-[220px] lg:w-[252px] ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out`}
+        className={`fixed bottom-0 left-0 top-20 z-50 flex h-screen w-full transform flex-col justify-start border-r bg-[#FDFDFD] md:w-[220px] lg:w-[252px] ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 ease-in-out`}
       >
         {isSidebarOpen && <Sidebar />}
       </div>
