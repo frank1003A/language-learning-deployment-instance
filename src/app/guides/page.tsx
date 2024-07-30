@@ -1,7 +1,7 @@
 "use client";
 
 import { Orbit, PlusIcon } from "lucide-react";
-import { FC } from "react";
+import { FC, useState } from "react";
 
 import CheckboxList from "~/components/checkbox/checkbox";
 import CustomButton from "~/components/common/common-button/common-button";
@@ -13,6 +13,11 @@ import { FocussedPreButton } from "~/components/preview-buttons/Focussed";
 import { LoadedPreButton } from "~/components/preview-buttons/Loaded";
 
 const StyleGuide: FC = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
   return (
     <main className="flex min-h-screen flex-col items-start gap-7 overflow-hidden p-6 sm:p-12 md:p-24">
       <h2 className="text-2xl font-semibold">Color Guides</h2>
@@ -735,12 +740,7 @@ const StyleGuide: FC = () => {
 
       {/* CheckBox */}
       <h2 className="text-2xl font-semibold">Checkbox</h2>
-      <CheckboxList
-        onChange={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-        checked={false}
-      />
+      <CheckboxList onChange={handleCheckboxChange} checked={isChecked} />
     </main>
   );
 };
