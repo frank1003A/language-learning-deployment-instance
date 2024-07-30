@@ -24,7 +24,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="bg-card grid h-full basis-1/2 bg-cover bg-center bg-no-repeat"></div>
+      <div className="grid h-full basis-1/2 bg-card bg-cover bg-center bg-no-repeat"></div>
     </section>
   );
 };
