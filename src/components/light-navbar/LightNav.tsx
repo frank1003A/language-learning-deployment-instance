@@ -1,5 +1,9 @@
-import { AlignJustify, ChevronDown } from "lucide-react";
+"use client";
+
+import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import {
   DropdownMenu,
@@ -32,68 +36,121 @@ const navbarLinks: NavbarLinksProperties[] = [
 ];
 
 const LightNav = () => {
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  useEffect(() => {
+    // Check if the user is signed in
+    const userSignedIn = false;
+    setIsSignedIn(userSignedIn);
+  }, []);
+
   return (
-    <>
-      <nav className="fixed left-0 right-0 top-0 z-50 w-screen">
-        <div className="mx-auto my-4 flex max-w-[350px] flex-row items-center rounded-full bg-white p-2.5 pl-5 shadow-md ring-1 ring-gray-200 md:max-w-xl md:justify-between md:shadow md:ring-primary-20 lg:max-w-3xl">
-          <Logo />
+    <nav className="fixed left-0 right-0 top-0 z-50 w-screen">
+      <div className="mx-auto my-4 hidden max-w-[350px] flex-row items-center rounded-full bg-white p-2.5 pl-5 shadow-md ring-1 ring-gray-200 md:flex md:max-w-xl md:justify-between md:shadow md:ring-primary-20 lg:max-w-3xl">
+        <Logo />
 
-          <div className="hidden items-center gap-5 md:flex lg:gap-7">
-            {navbarLinks.map((links, index) => {
-              const { isActive, linkPath, title } = links;
+        <div className="hidden items-center gap-5 md:flex lg:gap-7">
+          {navbarLinks.map((links, index) => {
+            const { isActive, linkPath, title } = links;
 
-              return (
-                <Link
-                  key={index}
-                  href={linkPath}
-                  className={`font-inter text-sm no-underline outline-none duration-300 ease-in hover:text-neutral-120 ${isActive ? "text-neutral-120" : "text-neutral-80"}`}
-                >
-                  {title}
-                </Link>
-              );
-            })}
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                className={`flex flex-row items-center gap-1 font-inter text-sm text-neutral-80 no-underline outline-none duration-300 ease-in`}
+            return (
+              <Link
+                key={index}
+                href={linkPath}
+                className={`font-inter text-sm no-underline outline-none duration-300 ease-in hover:text-neutral-120 ${isActive ? "text-neutral-120" : "text-neutral-80"}`}
               >
-                <div>About</div>
+                {title}
+              </Link>
+            );
+          })}
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              className={`flex flex-row items-center gap-1 font-inter text-sm text-neutral-80 no-underline outline-none duration-300 ease-in`}
+            >
+              <div>About</div>
 
-                <ChevronDown size={16} />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-[200px] rounded-xl border border-blue-200 bg-white shadow-sm">
-                <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Billing</DropdownMenuItem>
-                <DropdownMenuItem>Team</DropdownMenuItem>
-                <DropdownMenuItem>Subscription</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-
-          <div className="ml-auto flex flex-row gap-2 md:ml-0 lg:gap-4">
-            <Link href={"/sign-up"} className="no-underline outline-none">
-              <button className="rounded-full bg-black px-5 py-2 font-lilita text-sm font-semibold text-white outline-none ring-1 ring-black lg:px-6 lg:py-2.5">
+              <ChevronDown size={16} />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-[200px] rounded-xl border border-blue-200 bg-white shadow-sm">
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Team</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+        <div className="flex space-x-6">
+          {isSignedIn ? (
+            <div className="flex h-full w-full items-center gap-1 rounded-[40px] border-2 border-[#E9EEF3] px-[10px] py-1">
+              <Image
+                src="/logo/profile.svg"
+                alt="profile-icon"
+                width={45}
+                height={22}
+              />
+              <Image
+                src="/logo/about-down.svg"
+                alt="profile-arrow"
+                width={16}
+                height={16}
+              />
+            </div>
+          ) : (
+            <>
+              <button className="h-12 w-[132px] rounded-[59px] border border-[#1B1B1B] bg-[#2A2A2A] text-white">
                 Sign Up
               </button>
-            </Link>
-
-            <Link
-              href={"/sign-in"}
-              className="hidden no-underline outline-none md:block"
-            >
-              <button className="text-black-140 rounded-full bg-white px-5 py-2 font-lilita text-sm font-semibold ring-1 ring-gray-200 lg:px-6 lg:py-2.5">
+              <button className="h-12 w-[132px] rounded-[59px] border border-[#1B1B1B] bg-white text-[#2A2A2A]">
                 Sign In
               </button>
-            </Link>
-          </div>
-
-          <button className="ml-2 flex h-8 w-8 items-center justify-center rounded-full text-gray-400 outline-none ring-1 ring-gray-200 md:ml-0 md:hidden">
-            <AlignJustify size={16} />
-          </button>
+            </>
+          )}
         </div>
-      </nav>
-    </>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="mx-auto my-4 flex h-[64px] w-full max-w-[351px] items-center justify-between rounded-[60px] border border-neutral-30 p-3 shadow-sm md:hidden">
+        <div className="flex items-center">
+          <Link href={"/"}>
+            <Image
+              src="/logo/mobile-nav.svg"
+              alt="mobile-logo"
+              width={32}
+              height={32}
+              className="block md:hidden"
+            />
+          </Link>
+        </div>
+        <div className="flex items-center space-x-4">
+          {isSignedIn ? (
+            <div className="h-full w-full rounded-full border-2 border-[#E9EEF3] p-1">
+              <Image
+                src="/logo/profile.svg"
+                alt="profile-icon"
+                width={36}
+                height={36}
+              />
+            </div>
+          ) : (
+            <>
+              <button className="h-10 w-[109px] rounded-[59px] border border-[#E9EEF3] bg-[#2A2A2A] text-white">
+                Sign Up
+              </button>
+              <button className="flex h-10 w-10 items-center justify-center rounded-[49px] border border-[#C7D3E1] bg-white p-[10px]">
+                <Image
+                  src="/logo/mobile-3lines.svg"
+                  alt="menu-icon"
+                  width={20}
+                  height={20}
+                />
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+    </nav>
   );
 };
 

@@ -1,8 +1,9 @@
 "use client";
 
 import { Orbit, PlusIcon } from "lucide-react";
-import { FC } from "react";
+import { FC, useState } from "react";
 
+import CheckboxList from "~/components/checkbox/checkbox";
 import CustomButton from "~/components/common/common-button/common-button";
 import { Cookies } from "~/components/modals/cookies";
 import { ConnectedPreButton } from "~/components/preview-buttons/Connected";
@@ -11,8 +12,14 @@ import { DisabledPreButton } from "~/components/preview-buttons/Disabled";
 import { FocussedPreButton } from "~/components/preview-buttons/Focussed";
 import { LoadedPreButton } from "~/components/preview-buttons/Loaded";
 import Toasts from "~/components/toasts/Toasts";
+import Accordion from "~/components/ui/CustomAccordion";
 
 const StyleGuide: FC = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
   return (
     <main className="flex min-h-screen flex-col items-start gap-7 overflow-hidden p-6 sm:p-12 md:p-24">
       <h2 className="text-2xl font-semibold">Color Guides</h2>
@@ -740,6 +747,23 @@ const StyleGuide: FC = () => {
           <Toasts variant="default" textDescription="An alert goes here" />
         </div>
       </div>
+
+      <h2 className="text-2xl font-semibold mb-[20px]">Accordion</h2>
+      <Accordion
+        title="Accordion Heading"
+        content="These cookies are crucial for the website's basic functionality and cannot be disabled. They ensure that the website operates correctly and securely."
+        alwaysActive={false}
+        defaultOpen={false}
+      />
+      <Accordion
+        title="Accordion Heading"
+        content="These cookies are crucial for the website's basic functionality and cannot be disabled. They ensure that the website operates correctly and securely."
+        alwaysActive={true}
+        defaultOpen={true}
+      />
+      {/* CheckBox */}
+      <h2 className="text-2xl font-semibold">Checkbox</h2>
+      <CheckboxList onChange={handleCheckboxChange} checked={isChecked} />
     </main>
   );
 };
