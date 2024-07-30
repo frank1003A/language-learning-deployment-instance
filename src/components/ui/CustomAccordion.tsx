@@ -28,9 +28,9 @@ const Accordion: React.FC<AccordionProperties> = ({
         className="flex cursor-pointer flex-col gap-3 rounded-2xl p-4 shadow"
         onClick={toggleAccordion}
       >
-              <div className="flex items-center gap-3 flex-row">
+              <div className="flex flex-row items-center gap-3 ">
           <span
-            className={`mr-2 transform rounded-full  border p-1 transition-transform duration-300 ${
+            className={`mr-2 transform rounded-full border p-1 transition-transform duration-300 ${
               isOpen ? "rotate-180" : ""
             }`}
           >
