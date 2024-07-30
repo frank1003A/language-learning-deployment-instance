@@ -1,6 +1,6 @@
 "use client";
 
-import { Orbit, PlusIcon } from "lucide-react";
+import { ArrowBigLeft, Orbit, PlusIcon } from "lucide-react";
 import { FC, useState } from "react";
 
 import CheckboxList from "~/components/checkbox/checkbox";
@@ -21,6 +21,10 @@ const StyleGuide: FC = () => {
   };
   return (
     <main className="flex min-h-screen flex-col items-start gap-7 overflow-hidden p-6 sm:p-12 md:p-24">
+      <CustomButton href="/" variant="primary">
+        <ArrowBigLeft />
+        Home
+      </CustomButton>
       <h2 className="text-2xl font-semibold">Color Guides</h2>
       <div
         className="grid w-full items-start gap-4"
@@ -712,7 +716,8 @@ const StyleGuide: FC = () => {
       </div>
 
       {/* Preview Buttons */}
-      <div>
+      <div className="flex flex-col gap-3 py-5">
+        <h2 className="text-2xl font-semibold">Preview Buttons</h2>
         <div>
           <div>
             <div className="text-[24px]">Default Button</div>
@@ -736,23 +741,30 @@ const StyleGuide: FC = () => {
       </div>
 
       {/* Modals */}
-      <h2 className="text-2xl font-semibold">Modals</h2>
-      <Cookies />
-      <Accordion
-        title="Accordion Heading"
-        content="These cookies are crucial for the website's basic functionality and cannot be disabled. They ensure that the website operates correctly and securely."
-        alwaysActive={false}
-        defaultOpen={false}
-      />
-      <Accordion
-        title="Accordion Heading"
-        content="These cookies are crucial for the website's basic functionality and cannot be disabled. They ensure that the website operates correctly and securely."
-        alwaysActive={true}
-        defaultOpen={true}
-      />
-      {/* CheckBox */}
-      <h2 className="text-2xl font-semibold">Checkbox</h2>
-      <CheckboxList onChange={handleCheckboxChange} checked={isChecked} />
+      <div className="flex flex-col gap-3 py-5">
+        <h2 className="text-2xl font-semibold">Custom Modals</h2>
+        <Cookies />
+      </div>
+      <div className="flex flex-col gap-3 py-5">
+        <h2 className="text-2xl font-semibold">Custom Accordion</h2>
+        <Accordion
+          title="Accordion Heading"
+          content="These cookies are crucial for the website's basic functionality and cannot be disabled. They ensure that the website operates correctly and securely."
+          alwaysActive={false}
+          defaultOpen={false}
+        />
+        <Accordion
+          title="Accordion Heading"
+          content="These cookies are crucial for the website's basic functionality and cannot be disabled. They ensure that the website operates correctly and securely."
+          alwaysActive={true}
+          defaultOpen={true}
+        />
+      </div>
+      <div className="flex flex-col gap-3 py-5">
+        {/* CheckBox */}
+        <h2 className="text-2xl font-semibold">Custom Checkbox</h2>
+        <CheckboxList onChange={handleCheckboxChange} checked={isChecked} />
+      </div>
     </main>
   );
 };
