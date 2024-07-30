@@ -20,13 +20,15 @@ const LightNav = () => {
         {/* Desktop Navigation */}
         <div className="hidden w-full items-center justify-between md:flex">
           <div className="flex items-center">
-            <Image
-              src="/logo/lightnav-logo.svg"
-              alt="desktop-logo"
-              width={138}
-              height={32}
-              className="hidden md:block"
-            />
+            <Link href={"/"}>
+              <Image
+                src="/logo/lightnav-logo.svg"
+                alt="desktop-logo"
+                width={138}
+                height={32}
+                className="hidden md:block"
+              />
+            </Link>
           </div>
           <div className="flex space-x-[56px] text-base font-normal text-[#9BB1C9]">
             <Link href="/">Home</Link>
