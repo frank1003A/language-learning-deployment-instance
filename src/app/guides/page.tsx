@@ -3,6 +3,7 @@
 import { Orbit, PlusIcon } from "lucide-react";
 import { FC } from "react";
 
+import CheckboxList from "~/components/checkbox/checkbox";
 import CustomButton from "~/components/common/common-button/common-button";
 import { Cookies } from "~/components/modals/cookies";
 import { ConnectedPreButton } from "~/components/preview-buttons/Connected";
@@ -731,6 +732,15 @@ const StyleGuide: FC = () => {
       {/* Modals */}
       <h2 className="text-2xl font-semibold">Modals</h2>
       <Cookies />
+
+      {/* CheckBox */}
+      <h2 className="text-2xl font-semibold">Checkbox</h2>
+      <CheckboxList
+        onChange={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+        checked={false}
+      />
     </main>
   );
 };
