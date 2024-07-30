@@ -185,6 +185,7 @@ const config = {
         heroImageTwo: "url('/images/_Hero_Image_2.png')",
         heroImageThree: "url('/images/_Hero_Image_3.png')",
         heroImageFour: "url('/images/_Hero_Image_4.png')",
+        card: "url('/images/Cards.png')",
       },
       keyframes: {
         "accordion-down": {
