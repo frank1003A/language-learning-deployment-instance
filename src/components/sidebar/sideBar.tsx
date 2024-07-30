@@ -78,14 +78,14 @@ const Sidebar: FC<Iproperties> = ({ sideNavitems = sideItems }) => {
                   : "bg-transparent text-neutral-dark-2 hover:bg-gray-200"
               } flex items-center justify-center gap-2.5 px-2.5 py-3 text-sm transition-all duration-300 ease-in md:h-auto md:w-auto md:justify-start md:rounded-xl h-[52px] w-[233px]`}
             >
-              <Image src={item.icon} alt={`${item.route} icon`} className="h-5 w-5" role="sidebar-icon" width={28} />
+              <Image src={item.icon} alt={`${item.route} icon`} className="h-5 w-5" role="sidebar-icon" width={28} height={28}/>
               <span className="hidden md:block">{item.route}</span>
             </Link>
           ))}
         </section>
         <div className="flex items-center justify-center text-[#FF1925] text-[14px] h-[100px] w-full border-t-4 border-[#FFDECC]">
           <div className="flex items-center gap-[10px] hover:bg-gray-200 mx-auto px-[32px] h-[52px] rounded-xl">
-            <div><Image src={logout} alt="" width={28} height={28} /></div>
+            <div><Image src={logout} alt="logout-icon" width={28} height={28} /></div>
             <p>Sign Out</p>
           </div>
         </div>
