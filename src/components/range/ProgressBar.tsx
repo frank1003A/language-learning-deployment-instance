@@ -1,5 +1,4 @@
 import { Line } from "rc-progress";
-import React from "react";
 
 type DisplayProperties = {
   percent: number;

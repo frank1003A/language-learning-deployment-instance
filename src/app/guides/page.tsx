@@ -11,6 +11,8 @@ import { DefaultPreButton } from "~/components/preview-buttons/Default";
 import { DisabledPreButton } from "~/components/preview-buttons/Disabled";
 import { FocussedPreButton } from "~/components/preview-buttons/Focussed";
 import { LoadedPreButton } from "~/components/preview-buttons/Loaded";
+import DifficultLevel from "~/components/range/difficulty-level/DifficultLevel";
+import LevelProgress from "~/components/range/Levels/LevelProgress";
 import Toasts from "~/components/toasts/Toasts";
 import Accordion from "~/components/ui/CustomAccordion";
 
@@ -772,6 +774,26 @@ const StyleGuide: FC = () => {
         {/* CheckBox */}
         <h2 className="text-2xl font-semibold">Custom Checkbox</h2>
         <CheckboxList onChange={handleCheckboxChange} checked={isChecked} />
+      </div>
+      <div className="flex flex-col gap-3 py-5">
+        <h2 className="text-2xl font-semibold">Progress Bar</h2>
+        <div className="flex flex-col gap-4 lg:flex-row">
+          <LevelProgress
+            starCount={1}
+            percent={20}
+            strokeWidth={5}
+            strokeColor="#00AA00"
+            starWidth={24}
+          />
+          <LevelProgress
+            starCount={2}
+            percent={40}
+            strokeWidth={5}
+            strokeColor="#FE5900"
+            starWidth={24}
+          />
+        </div>
+        <DifficultLevel />
       </div>
     </main>
   );

@@ -19,9 +19,8 @@ const LevelProgress: React.FC<DisplayProperties> = ({
 }) => {
   const imageUrl = "/images/progress-star.svg";
 
-  // Limit the number of stars to a maximum of 5
-  const minStars = 1; // The minimum number of stars
-  const maxStars = 5; // The maximum number of stars
+  const minStars = 1;
+  const maxStars = 5;
 
   const starNumber = Math.min(Math.max(starCount ?? 0, minStars), maxStars);
 
