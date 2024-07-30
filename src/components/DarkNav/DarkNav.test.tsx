@@ -1,0 +1,30 @@
+import { render, screen } from "@testing-library/react";
+import { describe, expect, it } from "vitest";
+import DarkNav from "./DarkNav";
+
+import "@testing-library/jest-dom";
+
+describe("DarkNav", () => {
+  it("renders desktop logo", () => {
+    expect.assertions(1);
+    render(<DarkNav />);
+    const desktopLogo = screen.getByAltText("desktop-logo");
+    expect(desktopLogo).toBeInTheDocument();
+  });
+
+  it("renders mobile logo", () => {
+    expect.assertions(1);
+    render(<DarkNav />);
+    const mobileLogo = screen.getByAltText("mobile-logo");
+    expect(mobileLogo).toBeInTheDocument();
+  });
+
+  it("renders Sign In and Sign Up buttons when not signed in", () => {
+    expect.assertions(2); // Adding this line to specify the number of assertions in the test
+    render(<DarkNav />);
+    const signInButton = screen.getByText("Sign In");
+    const signUpButtons = screen.getAllByText("Sign Up");
+    expect(signInButton).toBeInTheDocument();
+    expect(signUpButtons.length).toBeGreaterThan(0);
+  });
+});
