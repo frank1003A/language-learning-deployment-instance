@@ -1,3 +1,5 @@
+import { Link } from "lucide-react";
+
 import CustomButton from "~/components/common/common-button/common-button";
 import HeroSection from "~/components/HeroSection";
 import LearningGoalModal from "~/components/modals/LearningGoalModal";
