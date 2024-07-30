@@ -113,7 +113,7 @@ const LightNav = () => {
                 </CustomButton>
                 <CustomButton
                   href="/signin"
-                  className="border-black border"
+                  className="border border-black"
                   variant="default"
                 >
                   Sign In
