@@ -113,13 +113,15 @@ const LightNav = () => {
       {/* Mobile Navigation */}
       <div className="mx-auto my-4 flex h-[64px] w-full max-w-[351px] items-center justify-between rounded-[60px] border border-neutral-30 p-3 shadow-sm md:hidden">
         <div className="flex items-center">
-          <Image
-            src="/logo/mobile-nav.svg"
-            alt="mobile-logo"
-            width={32}
-            height={32}
-            className="block md:hidden"
-          />
+          <Link href={"/"}>
+            <Image
+              src="/logo/mobile-nav.svg"
+              alt="mobile-logo"
+              width={32}
+              height={32}
+              className="block md:hidden"
+            />
+          </Link>
         </div>
         <div className="flex items-center space-x-4">
           {isSignedIn ? (
