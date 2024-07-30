@@ -2,7 +2,7 @@ import { lilitaOne } from "~/app/layout";
 
 const HeroSection = () => {
   return (
-    <section className="mt-20 flex h-screen w-full flex-col justify-between md:mt-0 md:flex-row">
+    <section className="mt-20 flex h-screen w-full flex-col justify-between pl-0 md:mt-0 md:flex-row lg:pl-10">
       <div className="flex h-full flex-col justify-center">
         <div className="ml-auto w-full px-3 md:px-0 md:pl-5 lg:max-w-md lg:pl-0 xl:max-w-[630px]">
           <h1
