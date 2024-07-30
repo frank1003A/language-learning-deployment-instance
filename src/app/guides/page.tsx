@@ -706,33 +706,23 @@ const StyleGuide: FC = () => {
       {/* Preview Buttons */}
       <div>
         <div>
-        <div>
-          <div className="text-[24px]">
-            Default Button
+          <div>
+            <div className="text-[24px]">Default Button</div>
+            <DefaultPreButton />
           </div>
-          <DefaultPreButton />
-        </div>
-          <div className="text-[24px]">
-            Disabled Button
-          </div>
+          <div className="text-[24px]">Disabled Button</div>
           <DisabledPreButton />
         </div>
         <div>
-          <div className="text-[24px]">
-            Focussed Button
-          </div>
+          <div className="text-[24px]">Focussed Button</div>
           <FocussedPreButton />
         </div>
         <div>
-          <div className="text-[24px]">
-            Loaded Button
-          </div>
+          <div className="text-[24px]">Loaded Button</div>
           <LoadedPreButton />
         </div>
         <div>
-          <div className="text-[24px]">
-            Disabled Button
-          </div>
+          <div className="text-[24px]">Disabled Button</div>
           <ConnectedPreButton />
         </div>
       </div>
