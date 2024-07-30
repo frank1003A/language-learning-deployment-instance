@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 @layer base {
   :root {
     --black-140: 0, 0, 0;
@@ -13,7 +15,7 @@
     --neutral-50: 222, 229, 237;
     --neutral-60: 199, 211, 225;
     --neutral-70: 177, 194, 213;
-    --neutral-80: 152, 129, 201;
+    --neutral-80: 155, 177, 201;
     --neutral-90: 144, 168, 195;
     --neutral-100: 118, 142, 169;
     --neutral-110: 93, 117, 144;
@@ -77,7 +79,7 @@
     --secondary-70: 136, 136, 136;
     --secondary-80: 113, 113, 113;
     --secondary-90: 89, 89, 89;
-    --secondary-100: 20, 20, 20;
+    --secondary-100: 65, 65, 65;
     --secondary-110: 42, 42, 42;
     --secondary-120: 27, 27, 27;
   
@@ -104,11 +106,11 @@
     --critical-50: 250, 199, 195;
     --critical-60: 246, 161, 155;
     --critical-70: 242, 123, 115;
-    --critical-80: 239, 86, 75;
+    --critical-80: 255, 76, 86;
     --critical-90: 237, 67, 55;
-    --critical-100: 211, 41, 29;
+    --critical-100: 255, 25, 37;
     --critical-110: 186, 16, 4;
-    --critical-120: 160, 0, 0;
+    --critical-120: 229, 0, 0;
     --critical-130: 135, 0, 0;
     --critical-150: 84, 0, 0;
     --critical-160: 58, 0, 0;
@@ -142,10 +144,13 @@
     --transparent-white-60: 255, 255, 255, 0.6;
     --transparent-white-65: 255, 255, 255, 0.65;
     --transparent-white-70: 255, 255, 255, 0.7;
+
+    --font-lilita-one: "Lilita One", sans-serif;;
+
+  }
 }
 
-  
-}
+
 
 #nprogress .bar {
   background: linear-gradient(90deg, #fff0bf, #f85318) !important;

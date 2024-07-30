@@ -13,13 +13,15 @@ import { Button } from "~/components/common/common-button";
 type Variant =
   | "default"
   | "primary"
-  | "destructive"
-  | "subtle"
+  | "primary-two"
+  | "critical"
   | "loading"
   | "outline"
   | "secondary"
-  | "ghost"
+  | "secondary-two"
+  | "neutral"
   | "link";
+
 type Size = "default" | "sm" | "lg" | "link" | "icon" | "circle";
 
 interface ButtonProperties {
@@ -144,19 +146,17 @@ const CustomButton: FC<ButtonProperties> = ({
   }
 
   return (
-    <>
-      <Button
-        variant={variant}
-        size={size}
-        disabled={isDisabled}
-        aria-label={ariaLabel}
-        className={className}
-        onClick={onClick}
-        role="button"
-      >
-        {buttonContent}
-      </Button>
-    </>
+    <Button
+      variant={variant}
+      size={size}
+      disabled={isDisabled}
+      aria-label={ariaLabel}
+      className={className}
+      onClick={onClick}
+      role="button"
+    >
+      {buttonContent}
+    </Button>
   );
 };
 
