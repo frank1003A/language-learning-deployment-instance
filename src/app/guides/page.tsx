@@ -10,6 +10,7 @@ import { DefaultPreButton } from "~/components/preview-buttons/Default";
 import { DisabledPreButton } from "~/components/preview-buttons/Disabled";
 import { FocussedPreButton } from "~/components/preview-buttons/Focussed";
 import { LoadedPreButton } from "~/components/preview-buttons/Loaded";
+import Toasts from "~/components/toasts/Toasts";
 
 const StyleGuide: FC = () => {
   return (
@@ -731,6 +732,14 @@ const StyleGuide: FC = () => {
       {/* Modals */}
       <h2 className="text-2xl font-semibold">Modals</h2>
       <Cookies />
+
+      <div className="flex flex-col gap-[20px]">
+        <h2 className="text-2xl font-semibold">Alerts</h2>
+
+        <div className="">
+          <Toasts variant="default" textDescription="An alert goes here" />
+        </div>
+      </div>
     </main>
   );
 };

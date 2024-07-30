@@ -1,3 +1,6 @@
+"use client";
+
+import { CircleCheckBig, CircleX } from "lucide-react";
 import React from "react";
 
 import CustomButton from "../common/common-button/common-button";
@@ -10,8 +13,17 @@ import {
   ToastViewport,
 } from "../ui/toast";
 
-// Example component that triggers a toast
-function Toasts() {
+type ToastsProperties = {
+  variant?: "default" | "critical" | null | undefined; // Toast variant
+  textTitle?: string; // Title text for the toast
+  textDescription: string; // Description text for the toast
+};
+
+const Toasts: React.FC<ToastsProperties> = ({
+  variant,
+  textTitle,
+  textDescription,
+}) => {
   const [open, setOpen] = React.useState(false);
 
   const showToast = () => {
@@ -27,11 +39,22 @@ function Toasts() {
       <ToastViewport />
 
       {open && (
-        <Toast open={open} onOpenChange={setOpen}>
+        <Toast open={open} onOpenChange={setOpen} variant={variant}>
           <div className="flex">
-            <ToastTitle></ToastTitle>
-            <ToastDescription>An alert goes here</ToastDescription>
-            <ToastAction asChild altText={""}>
+            <ToastTitle>{textTitle}</ToastTitle>
+            <ToastDescription>
+              <div
+                className={`flex flex-row items-center gap-[20px] font-lilita`}
+              >
+                {variant == "critical" ? (
+                  <CircleX data-testid="icon-check" />
+                ) : (
+                  <CircleCheckBig data-testid="icon-check" />
+                )}
+                {textDescription}
+              </div>
+            </ToastDescription>
+            <ToastAction asChild altText="">
               <button className="action-btn">Undo</button>
             </ToastAction>
             <ToastClose />
@@ -40,6 +63,6 @@ function Toasts() {
       )}
     </div>
   );
-}
+};
 
 export default Toasts;
