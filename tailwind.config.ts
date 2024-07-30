@@ -180,6 +180,12 @@ const config = {
       boxShadow: {
         spread: "0px 1px 18px 0px #0A39B01F",
       },
+      backgroundImage: {
+        heroImageOne: "url('/images/_Hero_Image.png')",
+        heroImageTwo: "url('/images/_Hero_Image_2.png')",
+        heroImageThree: "url('/images/_Hero_Image_3.png')",
+        heroImageFour: "url('/images/_Hero_Image_4.png')",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
