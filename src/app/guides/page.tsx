@@ -11,6 +11,7 @@ import { DefaultPreButton } from "~/components/preview-buttons/Default";
 import { DisabledPreButton } from "~/components/preview-buttons/Disabled";
 import { FocussedPreButton } from "~/components/preview-buttons/Focussed";
 import { LoadedPreButton } from "~/components/preview-buttons/Loaded";
+import Accordion from "~/components/ui/CustomAccordion";
 
 const StyleGuide: FC = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -737,7 +738,18 @@ const StyleGuide: FC = () => {
       {/* Modals */}
       <h2 className="text-2xl font-semibold">Modals</h2>
       <Cookies />
-
+      <Accordion
+        title="Accordion Heading"
+        content="These cookies are crucial for the website's basic functionality and cannot be disabled. They ensure that the website operates correctly and securely."
+        alwaysActive={false}
+        defaultOpen={false}
+      />
+      <Accordion
+        title="Accordion Heading"
+        content="These cookies are crucial for the website's basic functionality and cannot be disabled. They ensure that the website operates correctly and securely."
+        alwaysActive={true}
+        defaultOpen={true}
+      />
       {/* CheckBox */}
       <h2 className="text-2xl font-semibold">Checkbox</h2>
       <CheckboxList onChange={handleCheckboxChange} checked={isChecked} />
