@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="grid grid-cols-1 px-4 pt-[5%] md:grid-cols-2 md:pr-0">
+    <section className="grid grid-cols-1 px-4 md:grid-cols-2 md:pr-0">
       <div className="flex flex-col items-center justify-center md:ml-[80px] md:mr-[180px] md:items-start">
         <h1
           className={`${fira_sans.className} mt-[130px] text-center text-4xl font-bold leading-relaxed text-[#2A2A2A] md:text-left md:text-5xl md:leading-relaxed`}
