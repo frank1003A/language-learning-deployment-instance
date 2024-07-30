@@ -4,6 +4,11 @@ import { Orbit, PlusIcon } from "lucide-react";
 import { FC } from "react";
 
 import CustomButton from "~/components/common/common-button/common-button";
+import { ConnectedPreButton } from "~/components/preview-buttons/Connected";
+import { DefaultPreButton } from "~/components/preview-buttons/Default";
+import { DisabledPreButton } from "~/components/preview-buttons/Disabled";
+import { FocussedPreButton } from "~/components/preview-buttons/Focussed";
+import { LoadedPreButton } from "~/components/preview-buttons/Loaded";
 
 const StyleGuide: FC = () => {
   return (
@@ -695,6 +700,30 @@ const StyleGuide: FC = () => {
             </span>
             <span className="block font-mono text-sm text-gray-100">{"}"}</span>
           </div>
+        </div>
+      </div>
+
+      {/* Preview Buttons */}
+      <div>
+        <div>
+          <div>
+            <div className="text-[24px]">Default Button</div>
+            <DefaultPreButton />
+          </div>
+          <div className="text-[24px]">Disabled Button</div>
+          <DisabledPreButton />
+        </div>
+        <div>
+          <div className="text-[24px]">Focussed Button</div>
+          <FocussedPreButton />
+        </div>
+        <div>
+          <div className="text-[24px]">Loaded Button</div>
+          <LoadedPreButton />
+        </div>
+        <div>
+          <div className="text-[24px]">Disabled Button</div>
+          <ConnectedPreButton />
         </div>
       </div>
     </main>
