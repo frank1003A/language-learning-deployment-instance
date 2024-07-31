@@ -73,7 +73,7 @@ const Sidebar: FC<Iproperties> = ({ sideNavitems = sideItems }) => {
               onClick={() => setClickedLink(item.id)}
               className={`${
                 clickedLink === item.id
-                  ? "bg-[#FE8B4C] text-white rounded-[12px]"
+                  ? "rounded-[12px] bg-[#FE8B4C] text-white"
                   : currentPath === item.id
                     ? "bg-Primary/90 rounded-[12px] text-white"
                     : "text-neutral-dark-2 bg-transparent hover:bg-gray-200"
