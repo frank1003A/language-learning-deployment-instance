@@ -4,7 +4,6 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,6 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import Logo from "./logo-component";
+import Sidebar from "../sidebar/sideBar";
 
 interface NavbarLinksProperties {
   title: string;
@@ -43,9 +43,15 @@ const LightNav = () => {
     const userSignedIn = false;
     setIsSignedIn(userSignedIn);
   }, []);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 w-screen">
+   <>
+       <nav className="fixed left-0 right-0 top-0 z-50 w-screen">
       <div className="mx-auto my-4 hidden max-w-[350px] flex-row items-center rounded-full bg-white p-2.5 pl-5 shadow-md ring-1 ring-gray-200 md:flex md:max-w-xl md:justify-between md:shadow md:ring-primary-20 lg:max-w-3xl">
         <Logo />
 
@@ -136,7 +142,7 @@ const LightNav = () => {
               <button className="h-10 w-[109px] rounded-[59px] border border-[#E9EEF3] bg-[#2A2A2A] text-white">
                 Sign Up
               </button>
-              <button className="flex h-10 w-10 items-center justify-center rounded-[49px] border border-[#C7D3E1] bg-white p-[10px]">
+              <button onClick={toggleSidebar} className="flex h-10 w-10 items-center justify-center rounded-[49px] border border-[#C7D3E1] bg-white p-[10px]">
                 <Image
                   src="/logo/mobile-3lines.svg"
                   alt="menu-icon"
@@ -149,6 +155,12 @@ const LightNav = () => {
         </div>
       </div>
     </nav>
+    <div      className={`fixed bottom-0 left-0 top-20 z-50 flex h-screen w-full flex-col justify-start border-r bg-[#FDFDFD] md:w-[220px] lg:w-[252px] transform ${
+        isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+      } transition-transform duration-300 ease-in-out`}>
+    {isSidebarOpen && <Sidebar />}
+    </div>
+   </>
   );
 };
 

@@ -62,7 +62,7 @@ const Sidebar: FC<Iproperties> = ({ sideNavitems = sideItems }) => {
 
   return (
     <div className="fixed bottom-0 left-0 top-0 z-50 flex h-screen w-full flex-col justify-start border-r bg-[#FDFDFD] md:block md:w-[220px] md:items-center lg:w-[252px]">
-      <div className="hidden h-full w-[100%] flex-col justify-between md:flex">
+      <div className="h-full w-[100%] flex-col justify-between md:flex">
         <section className="mx-auto flex flex-col items-center justify-center gap-y-3 pt-6 text-[14px] md:items-stretch md:px-4">
           {sideNavitems.map((item, index) => (
             <Link
@@ -73,7 +73,7 @@ const Sidebar: FC<Iproperties> = ({ sideNavitems = sideItems }) => {
               onClick={() => setClickedLink(item.id)}
               className={`${
                 clickedLink === item.id
-                  ? "bg-[#FE8B4C] text-white"
+                  ? "bg-[#FE8B4C] text-white rounded-[12px]"
                   : currentPath === item.id
                     ? "bg-Primary/90 rounded-[12px] text-white"
                     : "text-neutral-dark-2 bg-transparent hover:bg-gray-200"
@@ -87,7 +87,7 @@ const Sidebar: FC<Iproperties> = ({ sideNavitems = sideItems }) => {
                 width={28}
                 height={28}
               />
-              <span className="hidden md:block">{item.route}</span>
+              <span className="block">{item.route}</span>
             </Link>
           ))}
         </section>
