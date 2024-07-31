@@ -49,6 +49,8 @@ const sideItems = [
 
 describe("sidebar Component", () => {
   it("should render sidebar links based on sideNavitems", () => {
+    expect.hasAssertions();
+
     // Set the mock return value for usePathname
     (usePathname as unknown as jest.Mock).mockReturnValue("/some/path");
 
